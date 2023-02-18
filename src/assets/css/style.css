@@ -59,18 +59,56 @@ body {
 .animation-slide-up {
   animation: slide-up 0.5s ease-in-out;
   animation-fill-mode: both;
-  animation-delay: 0.5s;
+}
+
+.animation-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes slide-up {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.delay-1 {
+  animation-delay: 1s;
+}
+
+.delay-2 {
+  animation-delay: 2s;
+}
+
+.delay-3 {
+  animation-delay: 3s;
+}
+
+.delay-3-5 {
+  animation-delay: 3.5s;
 }
 
 /* ---------------------------------------- */
@@ -85,7 +123,7 @@ body {
   top: 0;
   left: 0;
   background: var(--color-primary);
-  opacity: 0.9;
+  opacity: 0.5;
   z-index: 1;
   height: 100%;
   width: 100%;
@@ -110,6 +148,10 @@ body {
   letter-spacing: 0.07em;
   text-align: center;
   color: var(--color-secondary);
+}
+
+.section-hero-landing .section-hero-inner h1 span {
+  display: inline-block;
 }
 
 .section-hero-landing .section-hero-inner button {
@@ -143,19 +185,38 @@ body {
   color: var(--color-accent);
 }
 
-.section-hero-landing img.section-hero-landing-background {
+.section-hero-landing .section-hero-landing-background::before {
+  content: "";
   position: absolute;
   top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/src/assets/images/1066_websize.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--color-primary);
+  animation: fade-out 1s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 4s;
+}
+.section-hero-landing video#HeroBackgroundVideo {
+  position: fixed;
+  top: 0rem;
   left: 0;
+  opacity: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /* ---------------------------------------- */
 
 .section-about-us {
   position: relative;
+  background: var(--color-primary);
   padding: 3rem 0;
 }
 
@@ -192,4 +253,30 @@ body {
   width: 64%;
   height: 50%;
   object-fit: cover;
+}
+
+/* ---------------------------------------- */
+
+.section-what-we-do {
+  position: relative;
+  background: var(--color-primary);
+  padding: 3rem 0;
+}
+
+.section-what-we-do .section-what-we-do-inner {
+  text-align: center;
+}
+
+.section-what-we-do .section-what-we-do-inner h1 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 48px;
+  letter-spacing: 0.07em;
+  text-align: center;
+  color: var(--color-secondary);
+}
+
+
+.section-what-we-do .section-what-we-do-inner p {
+  color: var(--color-accent);
 }

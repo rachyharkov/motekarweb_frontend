@@ -3,6 +3,7 @@ import reactLogo from '../assets/react.svg'
 import Navbar from '../components/Navbar'
 import AboutUs from './partial-section/AboutUs'
 import HeroLanding from './partial-section/HeroLanding'
+import WhatWeDo from './partial-section/WhatWeDo'
 
 function Index() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function Index() {
       <main>
         <HeroLanding/>
         <AboutUs/>
+        <WhatWeDo/>
       </main>
     </div>
   )
