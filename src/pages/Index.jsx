@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
 import Navbar from '../components/Navbar'
+import AboutUs from './partial-section/AboutUs'
 import HeroLanding from './partial-section/HeroLanding'
 
 function Index() {
@@ -11,6 +12,7 @@ function Index() {
       <Navbar />
       <main>
         <HeroLanding/>
+        <AboutUs/>
       </main>
     </div>
   )

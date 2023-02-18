@@ -2,6 +2,7 @@
 
 :root {
   --color-primary: #292929;
+  --color-primary-light: #3a3a3a;;
   --color-secondary: #F68338;
   --color-secondary-light: #dfa177ce;
   --color-accent: #ffffff;
@@ -13,12 +14,72 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  background: var(--color-primary);
 }
 
-.section {
+.section-vh-100 {
   height: 100vh;
 }
 
+.section-vh-75 {
+  height: 75vh;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-subtitle {
+  width: max-content;
+  padding: 1rem 2rem;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  font-size: 21px;
+}
+
+.section-subtitle-with-bg {
+  position: relative;
+  background: var(--color-primary-light);
+  color: var(--color-accent);
+  border-radius: 50px;
+}
+
+.section-text-general {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  margin: 1rem 0;
+  color: var(--color-accent);
+}
+
+/* ---------------------------------------- */
+
+.animation-slide-up {
+  animation: slide-up 0.5s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------------- */
+
+.section-hero-landing {
+  position: relative;
+  background: var(--color-primary);
+  color: var(--color-accent);
+}
 .section-hero-landing .section-hero-landing-transparent {
   position: absolute;
   top: 0;
@@ -88,5 +149,47 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+/* ---------------------------------------- */
+
+.section-about-us {
+  position: relative;
+  padding: 3rem 0;
+}
+
+.section-about-us .section-about-us-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.section-about-us .section-about-us-images img:nth-child(1) {
+  margin: 2px;
+  width: 64%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.section-about-us .section-about-us-images img:nth-child(2) {
+  margin: 2px;
+  width: 34%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.section-about-us .section-about-us-images img:nth-child(3) {
+  margin: 2px;
+  width: 34%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.section-about-us .section-about-us-images img:nth-child(4) {
+  margin: 2px;
+  width: 64%;
+  height: 50%;
   object-fit: cover;
 }
