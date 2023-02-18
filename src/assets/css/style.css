@@ -8,9 +8,9 @@
   --color-accent: #ffffff;
 }
 
-/* * {
+* {
   outline: 1px dashed red;
-} */
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -92,6 +92,17 @@ body {
   0% {
     opacity: 0;
     transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
   }
   100% {
     opacity: 1;
@@ -364,4 +375,185 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* ---------------------------------------- */
+
+
+.working-process-selected {
+  background: var(--color-primary-light);
+  color: var(--color-accent);
+}
+
+.section-working-process {
+  position: relative;
+  background: var(--color-primary);
+  padding: 1.2rem 0;
+}
+
+.section-working-process .section-working-process-inner h4 {
+  text-align: center;
+  max-width: 876px;
+  margin: 2.4rem auto;
+}
+
+.section-working-process .working-process-steps {
+  padding: 0;
+}
+
+.section-working-process .working-process-detail {
+  border-radius: 30px;
+}
+
+/* Visualization of Step 1 */
+
+.section-working-process .working-process-detail .working-process-detail-visualization {
+  position: relative;
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-14  {
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  animation: slide-down-fade-in 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-21  {
+  position: absolute;
+  top: 25px;
+  height: 93px;
+  left: 110px;
+  z-index: 1;
+  animation: slide-down-fade-in 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-16:nth-of-type(2) {
+  position: absolute;
+  top: 25px;
+  right: 110px;
+  z-index: 1;
+  opacity: 0;
+  animation: slide-down-fade-in 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+.section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-16:nth-of-type(3) {
+  position: absolute;
+  top: 50px;
+  right: 110px;
+  z-index: 1;
+  opacity: 0;
+  animation: slide-down-fade-in 1s ease-in-out forwards;
+  animation-delay: 1s;
+}
+.section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-16:nth-of-type(4) {
+  position: absolute;
+  top: 75px;
+  right: 110px;
+  z-index: 1;
+  opacity: 0;
+  animation: slide-down-fade-in 1s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+.section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-16:nth-of-type(5) {
+  position: absolute;
+  top: 100px;
+  right: 110px;
+  z-index: 1;
+  opacity: 0;
+  animation: slide-down-fade-in 1s ease-in-out forwards;
+  animation-delay: 2s;
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-15  {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  animation: slide-down 1s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+
+
+/* End Visualization of Step 1 */
+
+.section-working-process .working-process-steps li {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 1px solid var(--color-primary-light);
+  margin: 1rem 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-working-process .working-process-steps li label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  line-height: 1.5rem;
+  letter-spacing: 0.07em;
+  text-align: left;
+  width: 100%;
+  color: var(--color-accent);
+}
+
+.section-working-process .working-process-steps li span.working-process-step-number {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.07em;
+  text-align: left;
+  width: auto;
+  color: var(--color-secondary);
+}
+
+.section-working-process .working-process-steps li span.working-process-step-selected-status {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  line-height: 2em;
+  letter-spacing: 0.1em;
+  position: relative;
+  padding-right: 1.4em;
+  text-decoration: none;
+}
+
+.section-working-process .working-process-steps li span.working-process-step-selected-status:hover, .section-working-process .working-process-steps li span.working-process-step-selected-status:focus {
+  text-decoration: none;
+}
+.section-working-process .working-process-steps li span.working-process-step-selected-status:before, .section-working-process .working-process-steps li span.working-process-step-selected-status:after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 0;
+  margin: 0 0 -8px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+.section-working-process .working-process-steps li span.working-process-step-selected-status:before {
+  right: 32px;
+  width: 2px;
+  height: 15px;
+  transition: all 300ms;
+  margin-top: -7.5px;
+  background: #ffffff;
+}
+.section-working-process .working-process-steps li span.working-process-step-selected-status:after {
+  right: 25px;
+  width: 16px;
+  height: 3px;
+  margin-top: -1.5px;
+  background: #ffffff;
+}
+.section-working-process .working-process-steps li span.working-process-step-selected-status.expanded:before {
+  height: 0;
+  margin-top: 0;
 }
