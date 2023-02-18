@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <header className="navbar-wrapper">
-      <nav className={isMobileDevice ? 'navbar-mobile' : 'navbar-desktop'}>
+      <nav className={isMobileDevice ? 'navbar-desktop-hidden' : 'navbar-desktop'}>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/services">services</a></li>
