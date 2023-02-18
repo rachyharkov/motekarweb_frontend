@@ -231,7 +231,7 @@ body {
 .section-about-us {
   position: relative;
   background: var(--color-primary);
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 
 .section-about-us .section-about-us-images {
@@ -274,13 +274,17 @@ body {
 .section-what-we-do {
   position: relative;
   background: var(--color-primary);
-  padding: 3rem 0;
+  padding: 1/2rem 0;
 }
 
 .section-what-we-do .section-what-we-do-inner {
   text-align: center;
   max-width: 876px;
   margin: auto;
+}
+
+.section-what-we-do .section-what-we-do-inner .section-what-we-do-galleries {
+  margin: 1.5rem auto;
 }
 
 .section-what-we-do .section-what-we-do-inner h1 {
@@ -293,7 +297,7 @@ body {
 }
 
 .section-what-we-do .section-what-we-do-inner h4 {
-  margin: 1rem auto;
+  margin: 2rem auto;
 }
 
 .section-what-we-do .section-what-we-do-inner p {

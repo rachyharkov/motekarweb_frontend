@@ -1,5 +1,44 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import YouTube from "react-youtube";
+import { register } from 'swiper/element/bundle'
+
+register()
+
 export default function WhatWeDo() {
+  const swiperElRef = useRef(null);
+  const [videos, setVideos] = useState([]);
+  
+  const myOptions = {
+    height: "100%",
+    width: "100%",
+    playerVars: {
+      autoplay: 0,
+    },
+  }
+
+  const addVideo = (element) => {
+    setVideos((videos) => [...videos, element]);
+  };
+
+  const stopAllVideosExcept = (video) => {
+    videos.forEach((v) => {
+      if (v !== video) {
+        v.pauseVideo();
+      }
+    });
+  };
+
+  useEffect(() => {
+    if (videos.length > 0) {
+      console.log("videos", videos);
+    }
+    
+    swiperElRef.current.addEventListener("slidechange", (e) => {
+      console.log(e.target.swiper.activeIndex);
+    });
+
+  }, [videos]);
+
   return (
     <section className="section-vh-75 section-what-we-do">
       <div className="container-fluid section-what-we-do-inner section-inner text-center">
@@ -18,19 +57,38 @@ export default function WhatWeDo() {
               or other pursuits. Streamline your workload. Produce high-quality
               films in less time. Experience peace of mind.
             </p>
-            <div className="section-what-we-do-galleries" style={{display: 'flex', 'flexDirection': 'column'}}>
+            <div
+              className="section-what-we-do-galleries"
+              style={{ display: "flex", flexDirection: "column" }}
+            >
               <swiper-container
+                ref={swiperElRef}
                 class="mySwiper"
                 thumbs-swiper=".mySwiper2"
                 space-between="10"
                 navigation="true"
-                style={{ '--swiper-navigation-color': '#fff', '--swiper-pagination-color': '#fff' }}
+                style={{
+                  "--swiper-navigation-color": "#fff",
+                  "--swiper-pagination-color": "#fff",
+                }}
               >
                 <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                  <YouTube
+                    style={{ height: "100%", width: "100%" }}
+                    videoId="2J7xlDH4QkA"
+                    opts={myOptions}
+                    onReady={(event) => addVideo(event.target)}
+                    onStateChange={(event) => { if (event.data === 1) { stopAllVideosExcept(event.target) } }}
+                  />
                 </swiper-slide>
                 <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                  <YouTube
+                    style={{ height: "100%", width: "100%" }}
+                    videoId="F2tWmS3Lzic"
+                    opts={myOptions}
+                    onReady={(event) => addVideo(event.target)}
+                    onStateChange={(event) => { if (event.data === 1) { stopAllVideosExcept(event.target) } }}
+                  />
                 </swiper-slide>
                 <swiper-slide>
                   <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
@@ -66,10 +124,10 @@ export default function WhatWeDo() {
                 watch-slides-progress="true"
               >
                 <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                  <img src="https://i3.ytimg.com/vi/2J7xlDH4QkA/maxresdefault.jpg" />
                 </swiper-slide>
                 <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                  <img src="https://i3.ytimg.com/vi/F2tWmS3Lzic/maxresdefault.jpg" />
                 </swiper-slide>
                 <swiper-slide>
                   <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
@@ -97,7 +155,9 @@ export default function WhatWeDo() {
                 </swiper-slide>
               </swiper-container>
             </div>
-            <button className="btn btn-primary mt-3">View Our Extended Work</button>
+            <button className="btn btn-primary mt-3">
+              View Our Extended Work
+            </button>
           </div>
         </div>
       </div>
