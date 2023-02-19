@@ -7,10 +7,10 @@
   --color-secondary-light: #dfa177ce;
   --color-accent: #ffffff;
 }
-
+/* 
 * {
   outline: 1px dashed red;
-}
+} */
 
 body {
   font-family: 'Inter', sans-serif;
@@ -79,6 +79,20 @@ body {
   animation-fill-mode: both;
 }
 
+.animation-pop-out {
+  animation: pop-out 0.5s ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes pop-out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -141,6 +155,7 @@ body {
   position: relative;
   background: var(--color-primary);
   color: var(--color-accent);
+  overflow: hidden;
 }
 .section-hero-landing .section-hero-landing-transparent {
   position: absolute;
@@ -216,7 +231,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/src/assets/images/1066_websize.jpg);
+  background-image: url(/public/images/1066_websize.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -226,12 +241,11 @@ body {
   animation-delay: 4s;
 }
 .section-hero-landing video#HeroBackgroundVideo {
-  position: fixed;
+  position: absolute;
   top: 0rem;
   left: 0;
   opacity: 0;
   z-index: 0;
-  width: 100%;
   height: 100%;
   object-fit: cover;
   transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -389,6 +403,7 @@ body {
   position: relative;
   background: var(--color-primary);
   padding: 1.2rem 0;
+  display: flex;
 }
 
 .section-working-process .section-working-process-inner h4 {
@@ -401,21 +416,32 @@ body {
   padding: 0;
 }
 
+.section-working-process .working-process-steps input[name="working-process-step"] {
+  display: none;
+}
+
 .section-working-process .working-process-detail {
   border-radius: 30px;
+  border: none;
+  background: var(--color-primary-light);
+}
+
+.section-working-process .working-process-detail .card-body {
+  height: 250px;
+  padding: 0;
 }
 
 /* Visualization of Step 1 */
 
 .section-working-process .working-process-detail .working-process-detail-visualization {
   position: relative;
+  width: 340px;
+  margin: auto;
 }
 
 .section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-14  {
   position: relative;
   z-index: 1;
-  opacity: 0;
-  animation: slide-down-fade-in 1s ease-in-out forwards;
   animation-delay: 0.5s;
 }
 
@@ -423,60 +449,48 @@ body {
   position: absolute;
   top: 25px;
   height: 93px;
-  left: 110px;
+  left: 30px;
   z-index: 1;
-  animation: slide-down-fade-in 1s ease-in-out forwards;
   animation-delay: 0.5s;
 }
 
 .section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-16:nth-of-type(2) {
   position: absolute;
   top: 25px;
-  right: 110px;
+  right: 30px;
   z-index: 1;
-  opacity: 0;
-  animation: slide-down-fade-in 1s ease-in-out forwards;
   animation-delay: 0.5s;
 }
 .section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-16:nth-of-type(3) {
   position: absolute;
   top: 50px;
-  right: 110px;
+  right: 30px;
   z-index: 1;
-  opacity: 0;
-  animation: slide-down-fade-in 1s ease-in-out forwards;
-  animation-delay: 1s;
+  animation-delay: 0.8s;
 }
 .section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-16:nth-of-type(4) {
   position: absolute;
   top: 75px;
-  right: 110px;
+  right: 30px;
   z-index: 1;
-  opacity: 0;
-  animation: slide-down-fade-in 1s ease-in-out forwards;
-  animation-delay: 1.5s;
+  animation-delay: 1.1s;
 }
 .section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-16:nth-of-type(5) {
   position: absolute;
   top: 100px;
-  right: 110px;
+  right: 30px;
   z-index: 1;
-  opacity: 0;
-  animation: slide-down-fade-in 1s ease-in-out forwards;
-  animation-delay: 2s;
+  animation-delay: 1.4s;
 }
 
 .section-working-process .working-process-detail .working-process-detail-visualization img.rectangle-15  {
   position: absolute;
   bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 40%;
+  transform: translateX(-30%);
   z-index: 1;
-  animation: slide-down 1s ease-in-out forwards;
-  animation-delay: 3s;
+  animation-delay: 1.7s;
 }
-
-
 
 /* End Visualization of Step 1 */
 
@@ -556,4 +570,83 @@ body {
 .section-working-process .working-process-steps li span.working-process-step-selected-status.expanded:before {
   height: 0;
   margin-top: 0;
+}
+
+/* --------------------------------------- */
+
+.section-our-family {
+  background: var(--color-primary);
+  padding: 2.4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-our-family img.section-our-family-bg-image {
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  width: 100%;
+  height: 100%;
+  object-fit: unset;
+  z-index: 0;
+  transform: scale(2) rotate(-3deg);
+}
+.section-our-family .section-our-family-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.section-our-family h4{
+  text-align: center;
+  margin: 2.4rem auto;
+}
+
+/* .section-our-family .our-families {
+  
+} */
+
+.section-our-family swiper-container.our-families swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+.section-our-family > div > div > div > swiper-container swiper-slide img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  transform: scale(0.4);
+  border-radius: 50%;
+  margin: 0 auto;
+  object-fit: cover;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+/* get 2 element before swiper-slide.swiper-slide-active */
+.section-our-family > div > div > div > swiper-container > swiper-slide.swiper-slide-prev img ,
+.section-our-family > div > div > div > swiper-container > swiper-slide.swiper-slide-next img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  transform: scale(0.7);
+  border-radius: 50%;
+  margin: 0 auto;
+  object-fit: cover;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.section-our-family > div > div > div > swiper-container > swiper-slide.swiper-slide-active img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+    transform: scale(1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-color: #F68338;
+    padding: 0.5rem;
 }

@@ -33,11 +33,11 @@ strip the heavy lifting from most production houses</p>
       <div className='section-hero-landing-transparent'></div>
       <div className='section-hero-landing-background animation-fade-in'>
         <video muted loop id="HeroBackgroundVideo" alt="placeholder" playsInline>
-          <source src="src/assets/videos/video-hero.mp4" type="video/mp4"></source>
-          <source src="src/assets/videos/video-hero.webm" type="video/webm"></source>
+          <source src="videos/video-hero.mp4" type="video/mp4"></source>
+          <source src="videos/video-hero.webm" type="video/webm"></source>
         </video>
       </div>
-      {/* <img data-src="./src/assets/images/1066_websize.jpg" className="lazyload section-hero-landing-background" alt="placeholder" /> */}
+      {/* <img data-src="./src/videos/images/1066_websize.jpg" className="lazyload section-hero-landing-background" alt="placeholder" /> */}
     </section>
   )
 
