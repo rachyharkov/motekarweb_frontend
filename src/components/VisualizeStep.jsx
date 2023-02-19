@@ -33,37 +33,37 @@ class VisualizeStep extends React.Component {
       renderedStep = <div className="working-process-detail-visualization animate__animated animate__zoomIn" key={this.state.stepSelected}>
               <img
                 className="animate__animated animate__bounceIn rectangle-14"
-                src="src/assets/images/rectangle-14.svg"
+                src="images/rectangle-14.svg"
                 alt="rectangle 14"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-21"
-                src="src/assets/images/rectangle-21.svg"
+                src="images/rectangle-21.svg"
                 alt="rectangle 21"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-15"
-                src="src/assets/images/rectangle-15.svg"
+                src="images/rectangle-15.svg"
                 alt="rectangle 15"
               />
             </div>
@@ -72,37 +72,37 @@ class VisualizeStep extends React.Component {
       renderedStep = <div className="working-process-detail-visualization animate__animated animate__zoomIn" key={this.state.stepSelected}>
               <img
                 className="animate__animated animate__bounceIn rectangle-14"
-                src="src/assets/images/rectangle-14.svg"
+                src="images/rectangle-14.svg"
                 alt="rectangle 14"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-21"
-                src="src/assets/images/rectangle-21.svg"
+                src="images/rectangle-21.svg"
                 alt="rectangle 21"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-15"
-                src="src/assets/images/rectangle-15.svg"
+                src="images/rectangle-15.svg"
                 alt="rectangle 15"
               />
             </div>
@@ -111,37 +111,37 @@ class VisualizeStep extends React.Component {
       renderedStep = <div className="working-process-detail-visualization animate__animated animate__zoomIn" key={this.state.stepSelected}>
               <img
                 className="animate__animated animate__bounceIn rectangle-14"
-                src="src/assets/images/rectangle-14.svg"
+                src="images/rectangle-14.svg"
                 alt="rectangle 14"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-16"
-                src="src/assets/images/rectangle-16.svg"
+                src="images/rectangle-16.svg"
                 alt="rectangle 16"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-21"
-                src="src/assets/images/rectangle-21.svg"
+                src="images/rectangle-21.svg"
                 alt="rectangle 21"
               />
               <img
                 className="animate__animated animate__bounceIn rectangle-15"
-                src="src/assets/images/rectangle-15.svg"
+                src="images/rectangle-15.svg"
                 alt="rectangle 15"
               />
             </div>

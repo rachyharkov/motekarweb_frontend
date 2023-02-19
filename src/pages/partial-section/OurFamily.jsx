@@ -64,7 +64,7 @@ export default function OurFamily() {
 
   return (
     <section className="section-vh-75 section-our-family">
-      <img src="src/assets/images/group-6.svg" alt="group-6" className="section-our-family-bg-image" />
+      <img src="images/group-6.svg" alt="group-6" className="section-our-family-bg-image" />
       <div className="container-fluid section-our-family-inner section-inner text-center">
         <div className="row">
           <div className="col-12">
@@ -82,28 +82,28 @@ export default function OurFamily() {
               ref={swiperElRef}
               >
               <swiper-slide className="our-family">
-                <img src="src/assets/images/member-1.png" alt="our-family-1" />
+                <img src="images/member-1.png" alt="our-family-1" />
               </swiper-slide>
               <swiper-slide className="our-family">
-                <img src="src/assets/images/member-2.jpg" alt="our-family-2" />
+                <img src="images/member-2.jpg" alt="our-family-2" />
               </swiper-slide>
               <swiper-slide className="our-family">
-                <img src="src/assets/images/member-3.png" alt="our-family-3" />
+                <img src="images/member-3.png" alt="our-family-3" />
               </swiper-slide>
               <swiper-slide className="our-family">
-                <img src="src/assets/images/member-4.png" alt="our-family-4" />
+                <img src="images/member-4.png" alt="our-family-4" />
               </swiper-slide>
               <swiper-slide className="our-family">
-                <img src="src/assets/images/member-5.png" alt="our-family-5" />
+                <img src="images/member-5.png" alt="our-family-5" />
               </swiper-slide>
               <swiper-slide className="our-family">
-                <img src="src/assets/images/member-6.png" alt="our-family-6" />
+                <img src="images/member-6.png" alt="our-family-6" />
               </swiper-slide>
               <swiper-slide className="our-family">
-                <img src="src/assets/images/member-7.png" alt="our-family-7" />
+                <img src="images/member-7.png" alt="our-family-7" />
               </swiper-slide>
               <swiper-slide className="our-family">
-                <img src="src/assets/images/member-1.png" alt="our-family-8" />
+                <img src="images/member-1.png" alt="our-family-8" />
               </swiper-slide>
             </swiper-container>
             <h5 className="our-family-name text-white">{namaDanJabatan[positionnya].nama}</h5>
