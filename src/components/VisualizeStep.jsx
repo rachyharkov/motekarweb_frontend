@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { CSSTransition } from "react-transition-group";
 import "animate.css";
 
 class VisualizeStep extends React.Component {

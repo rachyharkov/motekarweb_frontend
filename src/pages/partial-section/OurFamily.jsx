@@ -1,0 +1,116 @@
+import React, { useEffect, useRef, useState } from "react";
+import { register } from 'swiper/element/bundle'
+
+register()
+
+export default function OurFamily() {
+
+  const swiperElRef = useRef(null);
+  const [positionnya, setPositionnya] = useState(0);
+
+  const namaDanJabatan = {
+    0: {
+      nama: "Ero Dwi Nawa",
+      jabatan: "Director",
+    },
+    1: {
+      nama: "Muhammad Ghifari",
+      jabatan: "Jabatan 1",
+    },
+    2: {
+      nama: "Annisa Nurul Fajrin",
+      jabatan: "Jabatan 2",
+    },
+    3: {
+      nama: "Heru Nababan",
+      jabatan: "Jabatan 3",
+    },
+    4: {
+      nama: "Aini",
+      jabatan: "Jabatan 4",
+    },
+    5: {
+      nama: "No Name",
+      jabatan: "Jabatan 5",
+    },
+    6: {
+      nama: "Dy Aja",
+      jabatan: "Jabatan 6",
+    },
+    7: {
+      nama: "Ahmad Maududy",
+      jabatan: "Jabatan 7",
+    },
+    8: {
+      nama: "Alfian Nur Kholiludin",
+      jabatan: "Jabatan 8",
+    },
+  }
+
+  useEffect(() => {
+    swiperElRef.current.addEventListener("slidechange", (e) => {
+      console.log(e.target.swiper.activeIndex);
+      setPositionnya(e.target.swiper.activeIndex);
+    });
+  }, []);
+
+  const myOptions = {
+    height: "100%",
+    width: "100%",
+    playerVars: {
+      autoplay: 0,
+    },
+  }
+
+  return (
+    <section className="section-vh-75 section-our-family">
+      <img src="src/assets/images/group-6.svg" alt="group-6" className="section-our-family-bg-image" />
+      <div className="container-fluid section-our-family-inner section-inner text-center">
+        <div className="row">
+          <div className="col-12">
+            <h4 className="section-subtitle section-subtitle-with-bg">
+              Our Family
+            </h4>
+            <swiper-container class="our-families" pagination="false" pagination-clickable="true" slides-per-view="auto" navigation="true" watch-overflow="true" responsive-width="true"
+              centered-slides="true" grab-cursor="true" style={{
+                width: "100%",
+                padding: "0 10%",
+                height: "280px",
+                '--swiper-navigation-color': '#fff',
+                '--swiper-pagination-color': '#fff',
+              }}
+              ref={swiperElRef}
+              >
+              <swiper-slide className="our-family">
+                <img src="src/assets/images/member-1.png" alt="our-family-1" />
+              </swiper-slide>
+              <swiper-slide className="our-family">
+                <img src="src/assets/images/member-2.jpg" alt="our-family-2" />
+              </swiper-slide>
+              <swiper-slide className="our-family">
+                <img src="src/assets/images/member-3.png" alt="our-family-3" />
+              </swiper-slide>
+              <swiper-slide className="our-family">
+                <img src="src/assets/images/member-4.png" alt="our-family-4" />
+              </swiper-slide>
+              <swiper-slide className="our-family">
+                <img src="src/assets/images/member-5.png" alt="our-family-5" />
+              </swiper-slide>
+              <swiper-slide className="our-family">
+                <img src="src/assets/images/member-6.png" alt="our-family-6" />
+              </swiper-slide>
+              <swiper-slide className="our-family">
+                <img src="src/assets/images/member-7.png" alt="our-family-7" />
+              </swiper-slide>
+              <swiper-slide className="our-family">
+                <img src="src/assets/images/member-1.png" alt="our-family-8" />
+              </swiper-slide>
+            </swiper-container>
+            <h5 className="our-family-name text-white">{namaDanJabatan[positionnya].nama}</h5>
+            <p className="our-family-position text-white">{namaDanJabatan[positionnya].jabatan}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

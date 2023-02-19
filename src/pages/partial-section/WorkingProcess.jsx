@@ -38,16 +38,16 @@ export default function WorkingProcess() {
     <section className="section-vh-75 section-working-process">
       <div className="container-fluid section-working-process-inner section-inner text-center">
         <h4 className="section-subtitle section-subtitle-with-bg">
-          What We Do
+          Working Process
         </h4>
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div className="card working-process-detail">
+            <div className="card working-process-detail p-3">
               <div className="card-body">
                 <VisualizeStep stepSelected={stepSelected} />
               </div>
-              <h5>{titleAndDescription[stepSelected].title}</h5>
-              <p className="card-text">{titleAndDescription[stepSelected].description}</p>
+              <h5 className="text-white">{titleAndDescription[stepSelected].title}</h5>
+              <p className="card-text text-white">{titleAndDescription[stepSelected].description}</p>
             </div>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">

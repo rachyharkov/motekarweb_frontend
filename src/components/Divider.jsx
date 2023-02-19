@@ -1,0 +1,17 @@
+import React from "react";
+
+export default function Divider() {
+  return (
+    <div className="divider" style={{
+      height: '100px',
+      background: 'linear-gradient(to bottom, transparent, var(--color-primary))',
+      marginTop: '-6rem',
+      zIndex: '2',
+      position: 'relative',
+    }}>
+      <div className="divider__line"></div>
+      <div className="divider__circle"></div>
+      <div className="divider__line"></div>
+    </div>
+  );
+}
