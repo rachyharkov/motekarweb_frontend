@@ -37,7 +37,7 @@ strip the heavy lifting from most production houses</p>
           <source src="src/assets/videos/video-hero.webm" type="video/webm"></source>
         </video>
       </div>
-      {/* <img data-src="./src/assets/images/1066_websize.jpg" className="lazyload section-hero-landing-background" alt="placeholder" /> */}
+      {/* <img data-src="./src/src/assets/videos/images/1066_websize.jpg" className="lazyload section-hero-landing-background" alt="placeholder" /> */}
     </section>
   )
 

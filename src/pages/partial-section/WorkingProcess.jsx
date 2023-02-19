@@ -1,58 +1,38 @@
-import React, { useState } from "react";
-import { render } from "react-dom";
+import React, { useEffect, useRef, useState } from "react";
+import 'animate.css'
+import VisualizeStep from "../../components/VisualizeStep";
 
 export default function WorkingProcess() {
 
   const [stepSelected, setStepSelected] = useState(1)
-  // const [selectedStatusElement, setSelectedStatusElement] = useState()
+  const [transitionState, setTransitionState] = useState(false)
 
   let activeStateIcon = 'working-process-step-selected-status expanded'
   let inactiveStateIcon = 'working-process-step-selected-status'
-
   let activeStateBg = 'working-process-selected'
 
   const handleStepChange = (e) => { 
     if(e.target.checked) {
+      document.querySelector('.working-process-detail-visualization').classList.remove('animate__animated', 'animate__zoomIn')
+      document.querySelector('.working-process-detail-visualization').classList.add('animate__animated', 'animate__zoomOut')
       setStepSelected(e.target.value)
     }
   }
-  function RenderIlustration({ index }) {
 
-    if(index == 1) {
-      return <div className="working-process-detail-visualization">
-        <img class="rectangle-14" src="/src/assets/images/rectangle-14.svg" alt="rectangle 14" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-21" src="/src/assets/images/rectangle-21.svg" alt="rectangle 21" />
-        <img class="rectangle-15" src="/src/assets/images/rectangle-15.svg" alt="rectangle 15" />
-      </div>
-    }
-    else if(index == 2) {
-      return <div className="working-process-detail-visualization">
-        <img class="rectangle-14" src="/src/assets/images/rectangle-14.svg" alt="rectangle 14" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-21" src="/src/assets/images/rectangle-21.svg" alt="rectangle 21" />
-        <img class="rectangle-15" src="/src/assets/images/rectangle-15.svg" alt="rectangle 15" />
-      </div>
-    }
-    else {
-      return <div className="working-process-detail-visualization">
-        <img class="rectangle-14" src="/src/assets/images/rectangle-14.svg" alt="rectangle 14" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-16" src="/src/assets/images/rectangle-16.svg" alt="rectangle 16" />
-        <img class="rectangle-21" src="/src/assets/images/rectangle-21.svg" alt="rectangle 21" />
-        <img class="rectangle-15" src="/src/assets/images/rectangle-15.svg" alt="rectangle 15" />
-      </div>
-    }
+  const titleAndDescription = {
+    1: {
+      title: 'Fill the Form',
+      description: 'Fill the form with your details and upload your video.'
+    },
+    2: {
+      title: 'Deliver Footage',
+      description: 'We will deliver the footage to you.'
+    },
+    3: {
+      title: 'Download Films',
+      description: 'We will deliver the video to you within 24 hours.'
+    },
   }
-  
 
   return(
     <section className="section-vh-75 section-working-process">
@@ -64,10 +44,10 @@ export default function WorkingProcess() {
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div className="card working-process-detail">
               <div className="card-body">
-                <RenderIlustration index={stepSelected} />
-                <h5>Fill the Form</h5>
-                <p className="card-text">Fill the form with your details and upload your video.</p>
+                <VisualizeStep stepSelected={stepSelected} />
               </div>
+              <h5>{titleAndDescription[stepSelected].title}</h5>
+              <p className="card-text">{titleAndDescription[stepSelected].description}</p>
             </div>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
