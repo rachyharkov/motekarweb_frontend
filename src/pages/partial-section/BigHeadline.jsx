@@ -1,6 +1,6 @@
+import React, { useEffect } from "react";
 import AOS from "aos";
 import 'aos/dist/aos.css'
-import React, { useEffect } from "react";
 
 export default function BigHeadline() {
 
@@ -9,7 +9,7 @@ export default function BigHeadline() {
   },[])
 
   return (
-    <section className="section-vh-auto section-big-headline">
+    <section className="section-vh-75 section-big-headline">
       <div className="container-fluid section-big-headline-inner section-inner h-100">
         <div className="row h-100">
           <div className="col-xs-12 col-sm-12 col-md-7 col-lg-7 d-flex justify-content-center flex-column" data-aos="fade-left">

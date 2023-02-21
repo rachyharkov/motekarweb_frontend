@@ -658,6 +658,29 @@ body {
   /* background: var(--color-primary); */
   position: relative;
   overflow: hidden;
+  display: flex;
+}
+
+.section-big-headline:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  background: url(/public/images/falling-stars-bottom.svg) no-repeat center center;
+  z-index: 0;
+  width: 450px;
+  height: 200px;
+}
+
+.section-big-headline:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background: url(/public/images/falling-stars-top.svg) no-repeat center center;
+  z-index: -2;
+  width: 450px;
+  height: 200px;
 }
 
 .section-big-headline .section-big-headline-inner {
@@ -673,28 +696,30 @@ body {
   align-self: flex-end;
 }
 
-.section-big-headline .section-big-headline-inner div:nth-child(1) {
+.section-big-headline .section-big-headline-inner div.text-span-wrapper:nth-child(1) {
+  text-align: right;
+  margin-right: 1em;
+}
+
+.section-big-headline .section-big-headline-inner div.text-span-wrapper:nth-child(2) {
   text-align: right;
 }
 
-.section-big-headline .section-big-headline-inner div:nth-child(2) {
-  text-align: right;
-}
-
-.section-big-headline .section-big-headline-inner div:nth-child(1) div:nth-child(1) {
+.section-big-headline .section-big-headline-inner div.text-span-wrapper:nth-child(1) div:nth-child(1) {
   color: var(--color-accent);
 }
 
-.section-big-headline .section-big-headline-inner div:nth-child(1) div:nth-child(2) {
+.section-big-headline .section-big-headline-inner div.text-span-wrapper:nth-child(1) div:nth-child(2) {
   color: var(--color-secondary);
 }
 
-.section-big-headline .section-big-headline-inner div:nth-child(2) div:nth-child(1) button {
+.section-big-headline .section-big-headline-inner div.text-span-wrapper:nth-child(2) div:nth-child(1) button {
   color: var(--color-accent);
   border-radius: 10px;
+  margin: 0 10px;
 }
 
-.section-big-headline .section-big-headline-inner div:nth-child(2) div:nth-child(2) {
+.section-big-headline .section-big-headline-inner div.text-span-wrapper:nth-child(2) div:nth-child(2) {
   color: var(--color-accent);
 }
 
