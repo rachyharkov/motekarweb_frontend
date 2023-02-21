@@ -5,6 +5,7 @@ import Divider from '../components/Divider'
 import Navbar from '../components/Navbar'
 import AboutUs from './partial-section/AboutUs'
 import BigHeadline from './partial-section/BigHeadline'
+import FrequentlyAskedQuestions from './partial-section/FrequentlyAskedQuestions'
 import HeroLanding from './partial-section/HeroLanding'
 import OurFamily from './partial-section/OurFamily'
 import WhatWeDo from './partial-section/WhatWeDo'
@@ -25,7 +26,7 @@ function Index() {
         <OurFamily/>
         <BackgroundForAboveElement image="images/group-6.svg"/>
         <BigHeadline/>
-        
+        <FrequentlyAskedQuestions/>
       </main>
     </div>
   )
