@@ -39,6 +39,11 @@ body {
   margin: auto;
 }
 
+.section-inner > .row {
+  width: 100%;
+  margin: 0;
+}
+
 .section-subtitle {
   width: max-content;
   padding: 1rem 2rem;
