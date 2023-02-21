@@ -25,6 +25,7 @@ function Index() {
         <OurFamily/>
         <BackgroundForAboveElement image="images/group-6.svg"/>
         <BigHeadline/>
+        
       </main>
     </div>
   )
