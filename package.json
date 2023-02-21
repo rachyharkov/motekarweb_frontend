@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
     "react-animate-on-change": "^2.2.0",

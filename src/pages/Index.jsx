@@ -4,6 +4,7 @@ import BackgroundForAboveElement from '../components/BackgroundForAboveElement'
 import Divider from '../components/Divider'
 import Navbar from '../components/Navbar'
 import AboutUs from './partial-section/AboutUs'
+import BigHeadline from './partial-section/BigHeadline'
 import HeroLanding from './partial-section/HeroLanding'
 import OurFamily from './partial-section/OurFamily'
 import WhatWeDo from './partial-section/WhatWeDo'
@@ -22,7 +23,8 @@ function Index() {
         <WhatWeDo/>
         <WorkingProcess/>
         <OurFamily/>
-        <BackgroundForAboveElement/>
+        <BackgroundForAboveElement image="images/group-6.svg"/>
+        <BigHeadline/>
       </main>
     </div>
   )

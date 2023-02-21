@@ -8,9 +8,9 @@
   --color-accent: #ffffff;
 }
 
-* {
+/* * {
   outline: 1px dashed red;
-}
+} */
 
 body {
   font-family: 'Inter', sans-serif;
@@ -650,4 +650,61 @@ body {
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background-color: #F68338;
     padding: 0.5rem;
+}
+
+/*  ------------------------------------------- */
+
+.section-big-headline {
+  /* background: var(--color-primary); */
+  position: relative;
+  overflow: hidden;
+}
+
+.section-big-headline .section-big-headline-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.section-big-headline .section-big-headline-inner div.text-span-wrapper {
+  letter-spacing: 8px;
+  font-size: 3em;
+  font-weight: 700;
+  display: flex;
+  align-self: flex-end;
+}
+
+.section-big-headline .section-big-headline-inner div:nth-child(1) {
+  text-align: right;
+}
+
+.section-big-headline .section-big-headline-inner div:nth-child(2) {
+  text-align: right;
+}
+
+.section-big-headline .section-big-headline-inner div:nth-child(1) div:nth-child(1) {
+  color: var(--color-accent);
+}
+
+.section-big-headline .section-big-headline-inner div:nth-child(1) div:nth-child(2) {
+  color: var(--color-secondary);
+}
+
+.section-big-headline .section-big-headline-inner div:nth-child(2) div:nth-child(1) button {
+  color: var(--color-accent);
+  border-radius: 10px;
+}
+
+.section-big-headline .section-big-headline-inner div:nth-child(2) div:nth-child(2) {
+  color: var(--color-accent);
+}
+
+.section-big-headline .section-big-headline-inner p span {
+  color: var(--color-accent);
+}
+
+.section-big-headline .section-big-headline-inner p {
+  color: var(--color-secondary);
+  font-weight: 400;
+  font-size: 17px;
+  text-align: left;
 }
