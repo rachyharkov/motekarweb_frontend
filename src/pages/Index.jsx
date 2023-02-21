@@ -5,6 +5,7 @@ import Divider from '../components/Divider'
 import Navbar from '../components/Navbar'
 import AboutUs from './partial-section/AboutUs'
 import BigHeadline from './partial-section/BigHeadline'
+import Footer from './partial-section/Footer'
 import FrequentlyAskedQuestions from './partial-section/FrequentlyAskedQuestions'
 import HeroLanding from './partial-section/HeroLanding'
 import OurFamily from './partial-section/OurFamily'
@@ -28,6 +29,7 @@ function Index() {
         <BigHeadline/>
         <FrequentlyAskedQuestions/>
       </main>
+      <Footer/>
     </div>
   )
 }
