@@ -47,10 +47,10 @@ export default function WhatWeDo() {
             <h4 className="section-subtitle section-subtitle-with-bg">
               What We Do
             </h4>
-            <h1>
+            <h2>
               WE SPECIALIZE IN ONE THING, AND WE DO IT PERFECTLY: EDITING YOUR
               WEDDING FILM
-            </h1>
+            </h2>
             <p>
               We bring your couple's tales to life, tailored to your vision. Our
               streamlined approach allows you to prioritize your work, family,

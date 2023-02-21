@@ -64,7 +64,6 @@ export default function OurFamily() {
 
   return (
     <section className="section-vh-75 section-our-family">
-      <img src="images/group-6.svg" alt="group-6" className="section-our-family-bg-image" />
       <div className="container-fluid section-our-family-inner section-inner text-center">
         <div className="row">
           <div className="col-12">

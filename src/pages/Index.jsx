@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import reactLogo from '../assets/react.svg'
+import BackgroundForAboveElement from '../components/BackgroundForAboveElement'
 import Divider from '../components/Divider'
 import Navbar from '../components/Navbar'
 import AboutUs from './partial-section/AboutUs'
@@ -21,6 +22,7 @@ function Index() {
         <WhatWeDo/>
         <WorkingProcess/>
         <OurFamily/>
+        <BackgroundForAboveElement/>
       </main>
     </div>
   )

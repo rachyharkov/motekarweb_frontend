@@ -19,11 +19,11 @@ export default function HeroLanding() {
   setTimeout(startVideo,7000);
 
   return(
-    <section className='section-vh-100 section-hero-landing'>
+    <section className='section-vh-75 section-hero-landing'>
       <div className="container-fluid section-hero-inner section-inner">
         <div className="row">
           <div className="col-12">
-            <h1><span className="animation-slide-up delay-1">ETERNALLY CAPTURED, </span><br/><span className="animation-slide-up delay-2">BEAUTIFULLY EDITED</span></h1>
+            <h2><span className="animation-slide-up delay-1">ETERNALLY CAPTURED, </span><br/><span className="animation-slide-up delay-2">BEAUTIFULLY EDITED</span></h2>
             <p className="animation-fade-in delay-3">Motekar is A Team of trained video editors who are able to
 strip the heavy lifting from most production houses</p>
             <button className="btn btn-primary animation-fade-in delay-3-5">Beyond Editing</button>

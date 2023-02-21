@@ -3,7 +3,7 @@ import React from "react";
 export default function Divider() {
   return (
     <div className="divider" style={{
-      height: '100px',
+      height: '5rem',
       background: 'linear-gradient(to bottom, transparent, var(--color-primary))',
       marginTop: '-6rem',
       zIndex: '2',

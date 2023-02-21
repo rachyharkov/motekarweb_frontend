@@ -34,6 +34,19 @@ export default function WorkingProcess() {
     },
   }
 
+  let i = 1
+
+  useEffect(() => {
+    setInterval(() => {
+      if(i == 4) {
+        i = 1
+      }
+      handleStepChange({target: {checked: true, value: i}})
+      i++
+    }, 5000)
+  }, [])
+
+
   return(
     <section className="section-vh-75 section-working-process">
       <div className="container-fluid section-working-process-inner section-inner text-center">
