@@ -952,7 +952,7 @@ body {
   top: 40%;
   right: 0;
   margin: 0 0 -8px;
-  background: #ffvar(--color-accent);
+  background: var(--color-accent);
   border-radius: 2px;
 }
 .section-working-process .working-process-steps li span.working-process-step-selected-status:before {
@@ -961,14 +961,14 @@ body {
   height: 15px;
   transition: all 300ms;
   margin-top: -7.5px;
-  background: #ffvar(--color-accent);
+  background: var(--color-accent);
 }
 .section-working-process .working-process-steps li span.working-process-step-selected-status:after {
   right: 25px;
   width: 16px;
   height: 3px;
   margin-top: -1.5px;
-  background: #ffvar(--color-accent);
+  background: var(--color-accent);
 }
 .section-working-process .working-process-steps li span.working-process-step-selected-status.expanded:before {
   height: 0;
