@@ -66,7 +66,7 @@ class VisualizeStep extends React.Component {
                 src="images/rectangle-15.svg"
                 alt="rectangle 15"
               />
-              <i class='bx bx-up-arrow-alt animate__animated animate__bounceIn'></i>
+              <i className='bx bx-up-arrow-alt animate__animated animate__bounceIn'></i>
             </div>
     }
     if (this.state.stepSelected == 2) {

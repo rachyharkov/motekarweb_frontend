@@ -14,7 +14,7 @@ export default function BackgroundForAboveElement({ image }) {
       right: 0,
       width: '100%',
       zIndex: -1,
-      height: '30%'
+      height: '20%'
     }}>
       <img src={image} alt="group-6" style={{
         width: '100%',

@@ -6,7 +6,7 @@
   --color-primary-light-v2: #7e7e7e;;
   --color-secondary: #F68338;
   --color-secondary-light: #dfa177ce;
-  --color-accent: #ffffff;
+  --color-accent: #ebebeb;
 }
 
 /* * {
@@ -35,7 +35,7 @@ body {
 
 .section-inner {
   max-width: 1100px;
-  padding: 5rem 0;
+  padding: 5rem 1.2rem;
   margin: auto;
 }
 
@@ -46,10 +46,10 @@ body {
 
 .section-subtitle {
   width: max-content;
-  padding: 1rem 2rem;
+  padding: 0.9rem 1.6rem;
   letter-spacing: 2px;
   font-weight: 500px;
-  font-size: 17px;
+  font-size: calc(0.45em + 1.2vmin);
   transform: scale(0.9);
 }
 
@@ -61,9 +61,9 @@ body {
 }
 
 .section-text-general {
-  font-size: 18px;
+  font-size: calc(0.55em + 1.5vmin);
+  line-height: calc(0.7em + 2vmin);
   font-weight: 400;
-  line-height: 24px;
   letter-spacing: 0.05em;
   margin: 1rem 0;
   color: var(--color-accent);
@@ -190,9 +190,10 @@ body {
 }
 
 .section-hero-landing .section-hero-inner h2 {
-  font-size: 40px;
+  font-size: calc(1em + 2vmin);
+  margin: 1rem 0;
   font-weight: 800;
-  line-height: 48px;
+  line-height: calc(1em + 2vmin);;
   letter-spacing: 0.07em;
   text-align: center;
   color: var(--color-secondary);
@@ -223,14 +224,14 @@ body {
 }
 
 .section-hero-landing .section-hero-inner p {
-  font-size: 24px;
   font-weight: 200;
-  line-height: 29px;
+  line-height: calc(1em + 2vmin);
   letter-spacing: 0em;
   text-align: center;
   max-width: 700px;
   margin: 1.25rem auto;
   color: var(--color-accent);
+  font-size: calc(0.45em + 2vmin);
 }
 
 .section-hero-landing .section-hero-landing-background::before {
@@ -275,29 +276,29 @@ body {
 }
 
 .section-about-us .section-about-us-images img:nth-child(1) {
-  margin: 2px;
-  width: 64%;
+  margin: 0;
+  width: 63%;
   height: 50%;
   object-fit: cover;
 }
 
 .section-about-us .section-about-us-images img:nth-child(2) {
-  margin: 2px;
+  margin: 0;
   width: 34%;
   height: 50%;
   object-fit: cover;
 }
 
 .section-about-us .section-about-us-images img:nth-child(3) {
-  margin: 2px;
+  margin: 12px 0 0 0;
   width: 34%;
   height: 50%;
   object-fit: cover;
 }
 
 .section-about-us .section-about-us-images img:nth-child(4) {
-  margin: 2px;
-  width: 64%;
+  margin: 12px 0 0 0;
+  width: 63%;
   height: 50%;
   object-fit: cover;
 }
@@ -319,9 +320,10 @@ body {
 }
 
 .section-what-we-do .section-what-we-do-inner h2 {
-  font-size: 30px;
+  font-size: calc(1em + 2vmin);
+  margin: 1rem 0;
   font-weight: 800;
-  line-height: 48px;
+  line-height: calc(1em + 2vmin);
   letter-spacing: 0.07em;
   text-align: center;
   color: var(--color-secondary);
@@ -329,10 +331,6 @@ body {
 
 .section-what-we-do .section-what-we-do-inner h4 {
   margin: 2rem auto;
-}
-
-.section-what-we-do .section-what-we-do-inner p {
-  color: var(--color-accent);
 }
 
 .section-what-we-do .section-what-we-do-inner swiper-container {
@@ -343,7 +341,7 @@ body {
 .section-what-we-do .section-what-we-do-inner swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: var(--color-accent);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -434,8 +432,7 @@ body {
 }
 
 .section-working-process .working-process-detail .card-body {
-  height: 250px;
-  padding: 0;
+  padding: 1rem 0;
 }
 
 /* Visualization of Step 1 */
@@ -443,6 +440,7 @@ body {
 .section-working-process .working-process-detail .working-process-detail-visualization.step-1 {
   position: relative;
   width: 340px;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -450,6 +448,8 @@ body {
   position: relative;
   z-index: 1;
   animation-delay: 0.5s;
+  width: 340px;
+  max-width: 100%;
 }
 
 .section-working-process .working-process-detail .working-process-detail-visualization.step-1 img.rectangle-21  {
@@ -532,6 +532,7 @@ body {
 .section-working-process .working-process-detail .working-process-detail-visualization.step-2 {
   position: relative;
   width: 340px;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -539,6 +540,8 @@ body {
   position: relative;
   z-index: 1;
   animation-delay: 0.5s;
+  width: 340px;
+  max-width: 100%;
 }
 
 .section-working-process .working-process-detail .working-process-detail-visualization.step-2 .video-file-illustration {
@@ -597,24 +600,24 @@ body {
   40% {
     transform: scale(0.3);
     top: 60px;
-    right: 70px;
+    right: 20%;
   }
   80% {
     transform: scale(0.3);
-    right: 200px;
+    right: 69%;
   }
   80% {
     transform: scale(0.3);
-    right: 210px;
+    right: 70%px;
     top: 60px;
   }
   90% {
     transform: scale(1);
-    right: 240px;
+    right: 70%;
   }
   100% {
     transform: scale(0);
-    right: 240px;
+    right: 70%;
     top: 60px;
   }
 }
@@ -714,6 +717,7 @@ body {
 .section-working-process .working-process-detail .working-process-detail-visualization.step-3 {
   position: relative;
   width: 340px;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -721,6 +725,8 @@ body {
   position: relative;
   z-index: 1;
   animation-delay: 0.5s;
+  width: 340px;
+  max-width: 100%;
 }
 
 .section-working-process .working-process-detail .working-process-detail-visualization.step-3 .user-ill {
@@ -818,7 +824,7 @@ body {
     transform: scale(1);
   }
   30% {
-    top: 60px;
+    top: 70px;
     right: 70px;
     transform: scale(1);
   }
@@ -826,7 +832,7 @@ body {
     transform: scale(1);
   }
   100% {
-    top: 60px;
+    top: 70px;
     right: 70px;
     transform: scale(0);
   }
@@ -927,7 +933,7 @@ body {
 }
 
 .section-working-process .working-process-steps li span.working-process-step-selected-status {
-  color: #fff;
+  color: var(--color-accent);
   text-transform: uppercase;
   font-size: 1.4em;
   line-height: 2em;
@@ -946,7 +952,7 @@ body {
   top: 40%;
   right: 0;
   margin: 0 0 -8px;
-  background: #ffffff;
+  background: #ffvar(--color-accent);
   border-radius: 2px;
 }
 .section-working-process .working-process-steps li span.working-process-step-selected-status:before {
@@ -955,14 +961,14 @@ body {
   height: 15px;
   transition: all 300ms;
   margin-top: -7.5px;
-  background: #ffffff;
+  background: #ffvar(--color-accent);
 }
 .section-working-process .working-process-steps li span.working-process-step-selected-status:after {
   right: 25px;
   width: 16px;
   height: 3px;
   margin-top: -1.5px;
-  background: #ffffff;
+  background: #ffvar(--color-accent);
 }
 .section-working-process .working-process-steps li span.working-process-step-selected-status.expanded:before {
   height: 0;
@@ -1087,7 +1093,7 @@ body {
 
 .section-big-headline .section-big-headline-inner div.text-span-wrapper {
   letter-spacing: 8px;
-  font-size: 3em;
+  font-size: 6vmin;
   font-weight: 700;
   display: flex;
   align-self: flex-end;
@@ -1114,6 +1120,7 @@ body {
   color: var(--color-accent);
   border-radius: 10px;
   margin: 0 10px;
+  font-size: calc(0.28em + 1vmin);
 }
 
 .section-big-headline .section-big-headline-inner div.text-span-wrapper:nth-child(2) div:nth-child(2) {
@@ -1127,8 +1134,9 @@ body {
 .section-big-headline .section-big-headline-inner p {
   color: var(--color-secondary);
   font-weight: 400;
-  font-size: 17px;
+  font-size: calc(0.75em + 1vmin);
   text-align: left;
+  margin-top: 1rem;
 }
 
 /* --------------- FAQ ------------------- */
@@ -1158,9 +1166,9 @@ body {
   display: block;
   text-align: left;
   width: 100%;
-  padding: 1em 0;
+  padding: 0.6em 0;
   color: var(--color-primary-light-v2);
-  font-size: 1.15rem;
+  font-size: calc(0.5550em + 1.6vmin);
   font-weight: 400;
   border: none;
   background: none;

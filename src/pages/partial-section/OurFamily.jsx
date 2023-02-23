@@ -10,24 +10,25 @@ export default function OurFamily() {
 
   const namaDanJabatan = {
     0: {
-      nama: "Ero Dwi Nawa",
-      jabatan: "Director",
-    },
-    1: {
       nama: "Muhammad Ghifari",
       jabatan: "Jabatan 1",
     },
-    2: {
+    1: {
       nama: "Annisa Nurul Fajrin",
       jabatan: "Jabatan 2",
     },
-    3: {
+    2: {
       nama: "Heru Nababan",
       jabatan: "Jabatan 3",
     },
-    4: {
+    3: {
+
       nama: "Aini",
       jabatan: "Jabatan 4",
+    },
+    4: {
+      nama: "Ero Dwi Nawa",
+      jabatan: "Director",
     },
     5: {
       nama: "No Name",
@@ -52,6 +53,9 @@ export default function OurFamily() {
       console.log(e.target.swiper.activeIndex);
       setPositionnya(e.target.swiper.activeIndex);
     });
+
+    // set initial position of swiper to 4
+    swiperElRef.current.swiper.slideTo(4, 0);
   }, []);
 
   const myOptions = {
@@ -81,9 +85,6 @@ export default function OurFamily() {
               ref={swiperElRef}
               >
               <swiper-slide className="our-family">
-                <img src="images/member-1.png" alt="our-family-1" />
-              </swiper-slide>
-              <swiper-slide className="our-family">
                 <img src="images/member-2.jpg" alt="our-family-2" />
               </swiper-slide>
               <swiper-slide className="our-family">
@@ -94,6 +95,9 @@ export default function OurFamily() {
               </swiper-slide>
               <swiper-slide className="our-family">
                 <img src="images/member-5.png" alt="our-family-5" />
+              </swiper-slide>
+              <swiper-slide className="our-family">
+                <img src="images/member-1.png" alt="our-family-1" />
               </swiper-slide>
               <swiper-slide className="our-family">
                 <img src="images/member-6.png" alt="our-family-6" />

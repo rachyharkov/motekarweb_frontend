@@ -51,7 +51,7 @@ export default function WhatWeDo() {
               WE SPECIALIZE IN ONE THING, AND WE DO IT PERFECTLY: EDITING YOUR
               WEDDING FILM
             </h2>
-            <p>
+            <p className="section-text-general">
               We bring your couple's tales to life, tailored to your vision. Our
               streamlined approach allows you to prioritize your work, family,
               or other pursuits. Streamline your workload. Produce high-quality

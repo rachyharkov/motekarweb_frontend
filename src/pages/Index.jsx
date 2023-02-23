@@ -13,8 +13,6 @@ import WhatWeDo from './partial-section/WhatWeDo'
 import WorkingProcess from './partial-section/WorkingProcess'
 
 function Index() {
-  const [count, setCount] = useState(0)
-
   return (
     <div style={{position: 'relative'}}>
       <Navbar />
