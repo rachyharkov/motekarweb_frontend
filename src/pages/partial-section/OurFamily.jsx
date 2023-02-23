@@ -70,7 +70,7 @@ export default function OurFamily() {
     <section className="section-vh-75 section-our-family">
       <div className="container-fluid section-our-family-inner section-inner text-center">
         <div className="row">
-          <div className="col-12">
+          <div className="col-12 p-0">
             <h4 className="section-subtitle section-subtitle-with-bg">
               Our Family
             </h4>
