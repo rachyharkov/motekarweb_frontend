@@ -37,13 +37,13 @@ export default function WorkingProcess() {
   let i = 1
 
   useEffect(() => {
-    setInterval(() => {
-      if(i == 4) {
-        i = 1
-      }
-      handleStepChange({target: {checked: true, value: i}})
-      i++
-    }, 5000)
+    // setInterval(() => {
+    //   if(i == 4) {
+    //     i = 1
+    //   }
+    //   handleStepChange({target: {checked: true, value: i}})
+    //   i++
+    // }, 5000)
   }, [])
 
 

@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-inner-content">
           <h5>PT. Motekar Digital Kreasi</h5>
-          <p>Jl. Buah Batu No. 161 Kelurahan Turangga Kecamatan Lengkong Bandung Post Code 40264 - West Java Indonesia</p>
+          <p>Jl. Buah Batu No. 161, Kelurahan Turangga, Kecamatan Lengkong, Bandung, 40264 - West Java Indonesia</p>
           <p>ask@motekarstudio.com | 08xxxxxxxxxx</p>
           <p>Copyright &copy; {new Date().getFullYear()} Motekar Studio</p>
           <p><i className="bx bxs-palette"></i> by <a href="https://www.motekarstudio.com/" target="_blank" rel="noreferrer">Alfian K.</a> | <i class='bx bx-code-alt' ></i> by <a href="https://www.rnh-is.me/" target="_blank" rel="noreferrer">rachyharkov</a></p>
