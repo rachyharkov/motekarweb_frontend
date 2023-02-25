@@ -31,6 +31,11 @@ body {
   height: auto;
 }
 
+.section-vh-85 {
+  min-height: 85vh;
+  height: auto;
+}
+
 .section-vh-auto {
   height: auto;
 }
@@ -51,7 +56,7 @@ body {
   padding: 0.9rem 1.6rem;
   letter-spacing: 2px;
   font-weight: 500px;
-  font-size: calc(0.45em + 1.2vmin);
+  font-size: calc(0.55em + 1.5vmin);
   transform: scale(0.9);
 }
 
@@ -69,12 +74,6 @@ body {
   letter-spacing: 0.05em;
   margin: 1rem 0;
   color: var(--color-accent);
-}
-
-/* ---------------------------------------- */
-
-.navbar-desktop-hidden {
-  display: none;
 }
 
 /* ---------------------------------------- */

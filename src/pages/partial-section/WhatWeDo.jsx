@@ -59,7 +59,7 @@ export default function WhatWeDo() {
             </p>
             <div
               className="section-what-we-do-galleries"
-              style={{ display: "flex", flexDirection: "column" }}
+              style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}
             >
               <swiper-container
                 ref={swiperElRef}
@@ -122,6 +122,10 @@ export default function WhatWeDo() {
                 slides-per-view="4"
                 free-mode="true"
                 watch-slides-progress="true"
+                style={{
+                  'transform': 'scale(0.7)',
+                  'marginTop': '-13px'
+                }}
               >
                 <swiper-slide>
                   <img src="https://i3.ytimg.com/vi/2J7xlDH4QkA/maxresdefault.jpg" />

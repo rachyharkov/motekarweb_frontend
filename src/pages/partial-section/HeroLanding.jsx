@@ -19,7 +19,7 @@ export default function HeroLanding() {
   setTimeout(startVideo,7000);
 
   return(
-    <section className='section-vh-75 section-hero-landing'>
+    <section className='section-vh-85 section-hero-landing'>
       <img className='header-logo animate__animated animate__fadeIn' src="images/logo-with-title-removebg.png" alt="logo" />
       <div className="container-fluid section-hero-inner section-inner">
         <div className="row">
