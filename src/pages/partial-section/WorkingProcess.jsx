@@ -1,6 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import 'animate.css'
-import VisualizeStep from "../../components/VisualizeStep";
+// import VisualizeStep from "../../components/VisualizeStep";
+
+const VisualizeStep = React.lazy(() => import('../../components/VisualizeStep'))
 
 export default function WorkingProcess() {
 
@@ -37,13 +39,13 @@ export default function WorkingProcess() {
   let i = 1
 
   useEffect(() => {
-    // setInterval(() => {
-    //   if(i == 4) {
-    //     i = 1
-    //   }
-    //   handleStepChange({target: {checked: true, value: i}})
-    //   i++
-    // }, 5000)
+    setInterval(() => {
+      if(i == 4) {
+        i = 1
+      }
+      handleStepChange({target: {checked: true, value: i}})
+      i++
+    }, 6000)
   }, [])
 
 
@@ -57,7 +59,9 @@ export default function WorkingProcess() {
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div className="card working-process-detail p-3">
               <div className="card-body">
-                <VisualizeStep stepSelected={stepSelected} />
+                <Suspense fallback={<div>Loading...</div>} className="card-body">
+                  <VisualizeStep stepSelected={stepSelected} />
+                </Suspense>
               </div>
               <h5 className="text-white">{titleAndDescription[stepSelected].title}</h5>
               <p className="card-text text-white">{titleAndDescription[stepSelected].description}</p>

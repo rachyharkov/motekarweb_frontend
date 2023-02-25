@@ -7,10 +7,10 @@ export default function AboutUs() {
         <div className="row h-100">
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center flex-column">
             <div className="section-about-us-images">
-              <img data-src="images/1066_websize.jpg" src="images/1066_websize.jpg" className="lazyload section-about-us-image" alt="placeholder" />
-              <img data-src="images/1066_websize.jpg" src="images/1066_websize.jpg" className="lazyload section-about-us-image" alt="placeholder" />
-              <img data-src="images/1066_websize.jpg" src="images/1066_websize.jpg" className="lazyload section-about-us-image" alt="placeholder" />
-              <img data-src="images/1066_websize.jpg" src="images/1066_websize.jpg" className="lazyload section-about-us-image" alt="placeholder" />
+              <img src="images/1066_websize.jpg" className="section-about-us-image" alt="placeholder" />
+              <img src="images/1066_websize.jpg" className="section-about-us-image" alt="placeholder" />
+              <img src="images/1066_websize.jpg" className="section-about-us-image" alt="placeholder" />
+              <img src="images/1066_websize.jpg" className="section-about-us-image" alt="placeholder" />
             </div>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex p-5 justify-content-center flex-column">

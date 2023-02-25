@@ -7,6 +7,8 @@
   --color-secondary: #F68338;
   --color-secondary-light: #dfa177ce;
   --color-accent: #ebebeb;
+  --line-border-fill: #6e6e6e;
+  --line-border-empty: #6b6b6b;
 }
 
 /* * {
@@ -165,6 +167,25 @@ body {
   color: var(--color-accent);
   overflow: hidden;
 }
+
+.section-hero-landing .header-logo {
+  position: absolute;
+  z-index: 2;
+  width: 90px;
+  right: 50%;
+  transform: translate(50%, 18%);
+  transition: all 0.5s ease-in-out;
+}
+
+
+@media screen and (min-width: 768px) {
+  .section-hero-landing .header-logo {
+    right: 90%;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+
 .section-hero-landing .section-hero-landing-transparent {
   position: absolute;
   top: 0;
@@ -433,6 +454,8 @@ body {
 
 .section-working-process .working-process-detail .card-body {
   padding: 1rem 0;
+  height: 100%;
+  max-height: 240px;
 }
 
 /* Visualization of Step 1 */
