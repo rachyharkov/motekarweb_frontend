@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useRef, useState } from "react";
 import 'animate.css'
 // import VisualizeStep from "../../components/VisualizeStep";
 
-const VisualizeStep = React.lazy(() => import('../../components/VisualizeStep'))
+const VisualizeStep = React.lazy(() => import('../../../components/VisualizeStep'))
 
 export default function WorkingProcess() {
 

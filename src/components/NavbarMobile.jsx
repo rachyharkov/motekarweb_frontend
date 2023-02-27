@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import '../assets/css/navbar.css'
 import BlurBackground from './BlurBackground';
 
@@ -61,33 +62,15 @@ export default function NavbarMobile() {
               </div>
             </button>
           </div>
-          {/* <div className='navbar-mobile-links-quick-nav'>
-            <a href="/" className="btn link-nav"><i className="fas fa-home"></i>Home</a>
-            <a href="/dashboard" className="btn link-nav"><i className="fas fa-tachometer-alt"></i>Dashboard</a>
-            <a href="/my-files" className="btn link-nav"><i className="fas fa-folder-open"></i>My Files</a>
-            <a href="/coupons" className="btn link-nav"><i className="fas fa-tags"></i>Coupons</a>
-          </div>
-          <div className='navbar-mobile-order-tracking'>
-            <h3>Tracker</h3>
-            <div className="order-tracking-visual">
-              <div className="order-tracking-status">
-                <p>Order Placed</p>
-                <p>25%</p>
-              </div>
-              <div class="progress2 progress-moved">
-                <div className="progress-bar2"></div>
-              </div>
-            </div>
-          </div> */}
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-            <li><a href="/about">FAQ</a></li>
-            <li><a href="/FaQ">About Us</a></li>
+            <li><Link onClick={() => setToggleMobileMenu(!toggleMobileMenu)} to="/">Home</Link></li>
+            <li><Link onClick={() => setToggleMobileMenu(!toggleMobileMenu)} to="/services">Services</Link></li>
+            <li><Link onClick={() => setToggleMobileMenu(!toggleMobileMenu)} to="/pricing">Pricing</Link></li>
+            <li><Link onClick={() => setToggleMobileMenu(!toggleMobileMenu)} to="/about">FAQ</Link></li>
+            <li><Link onClick={() => setToggleMobileMenu(!toggleMobileMenu)} to="/FaQ">About Us</Link></li>
             <li className="animation start-home"></li>
           </ul>
-          {/* <a href="/contact-us" className="btn btn-primary">Contact Us</a> */}
+          {/* <Link to="/contact-us" className="btn btn-primary">Contact Us</Link> */}
         </nav>
       </header>
     </>

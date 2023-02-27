@@ -1,17 +1,8 @@
 import { useState, useEffect } from 'react'
-import reactLogo from '../assets/react.svg'
-import BackgroundForAboveElement from '../components/BackgroundForAboveElement'
-import Divider from '../components/Divider'
+import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import NavbarMobile from '../components/NavbarMobile'
-import AboutUs from './partial-section/AboutUs'
-import BigHeadline from './partial-section/BigHeadline'
-import Footer from './partial-section/Footer'
-import FrequentlyAskedQuestions from './partial-section/FrequentlyAskedQuestions'
-import HeroLanding from './partial-section/HeroLanding'
-import OurFamily from './partial-section/OurFamily'
-import WhatWeDo from './partial-section/WhatWeDo'
-import WorkingProcess from './partial-section/WorkingProcess'
+import Footer from '../components/Footer'
 
 function Index() {
 
@@ -34,17 +25,10 @@ function Index() {
 
   return (
     <div style={{position: 'relative'}}>
+      <img className='header-logo animate__animated animate__fadeIn' src="images/logo-with-title-removebg.png" alt="logo" />
       {isMobileDevice ? <NavbarMobile/> : <Navbar/>}
       <main>
-        <HeroLanding/>
-        <Divider/>
-        <AboutUs/>
-        <WhatWeDo/>
-        <WorkingProcess/>
-        <OurFamily/>
-        <BackgroundForAboveElement image="images/group-6.svg"/>
-        <BigHeadline/>
-        <FrequentlyAskedQuestions/>
+        <Outlet/>
       </main>
       <Footer/>
     </div>

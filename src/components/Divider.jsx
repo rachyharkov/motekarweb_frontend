@@ -5,7 +5,7 @@ export default function Divider() {
     <div className="divider" style={{
       height: '5rem',
       background: 'linear-gradient(to bottom, transparent, var(--color-primary))',
-      marginTop: '-6rem',
+      marginTop: '-5rem',
       zIndex: '2',
       position: 'relative',
     }}>

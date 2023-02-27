@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
-import '../../assets/css/detail-summary.css'
 import axios from "axios";
-import { getFaqs } from "../../helper/api";
+import { getFaqs } from "../../../helper/api";
 import AOS from 'aos';
 
 export default function FrequentlyAskedQuestions() {
