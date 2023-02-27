@@ -22,8 +22,8 @@ export default function WorkingProcess() {
       description: 'Fill the form with your details and upload your video.'
     },
     2: {
-      title: 'Deliver Footage',
-      description: 'We will deliver the footage to you.'
+      title: 'Deliver Progress',
+      description: 'We update the editing process to you on our web portal'
     },
     3: {
       title: 'Download Films',
@@ -33,13 +33,13 @@ export default function WorkingProcess() {
 
 
   const runAutoChangeVisualStep = () => {
-    interval = setInterval(() => {
-      if(i == 4) {
-        i = 1
-      }
-      handleStepChange({target: {checked: true, value: i}})
-      i++
-    }, 6000)
+    // interval = setInterval(() => {
+    //   if(i == 4) {
+    //     i = 1
+    //   }
+    //   handleStepChange({target: {checked: true, value: i}})
+    //   i++
+    // }, 6000)
   }
 
   const handleStepChange = (e) => {
@@ -84,7 +84,7 @@ export default function WorkingProcess() {
               <li className={"working-process-step working-process-step-2 " + (stepSelected == 2 && activeStateBg)}>
                 <span className="working-process-step-number">02</span>
                 <input type="radio" name="working-process-step" id="step-2" value={2} onChange={handleStepChange} />
-                <label htmlFor="step-2">Deliver Footage</label>
+                <label htmlFor="step-2">Deliver Progress</label>
                 <span className={stepSelected == 2 ? activeStateIcon : inactiveStateIcon}></span>
               </li>
               <li className={"working-process-step working-process-step-3 " + (stepSelected == 3 && activeStateBg)}>

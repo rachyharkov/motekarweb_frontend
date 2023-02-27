@@ -7,11 +7,20 @@ class VisualizeStep extends React.Component {
     this.state = {
       stepSelected: this.props.stepSelected,
       insideBool: false,
+      percentage: 0,
     };
   }
 
   componentDidMount() {
     console.log("Component Mounted");
+    let i = 0;
+    let interval = setInterval(() => {
+      if (i == 100) {
+        i = 0;
+      }
+      this.setState({ percentage: i });
+      i++;
+    }, 700);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -72,6 +81,45 @@ class VisualizeStep extends React.Component {
     if (this.state.stepSelected == 2) {
       renderedStep = <div className="working-process-detail-visualization step-2 animate__animated animate__zoomIn" key={this.state.stepSelected}>
               <img
+                className="rectangle-14"
+                src="images/rectangle-14.svg"
+                alt="rectangle 14"
+              />
+              <img
+                className="rectangle-14"
+                src="images/rectangle-14.svg"
+                alt="rectangle 14"
+              />
+              <p className="progress-indicator-illustration">{this.state.percentage}%</p>
+              <img
+                className="rectangle-16"
+                src="images/rectangle-16.svg"
+                alt="rectangle 16"
+              />
+              <img
+                className="rectangle-16"
+                src="images/rectangle-16.svg"
+                alt="rectangle 16"
+              />
+              <div className="user-illustration user-ill">
+                <img
+                  src="images/user-illustration.svg"
+                  alt="user-illustration"
+                />
+                <p>Client</p>
+              </div>
+              <div className="user-illustration motekar-ill">
+                <img
+                  src="images/motekar-illustration.svg"
+                  alt="user-illustration"
+                />
+                <p>Motekar</p>
+              </div>
+            </div>
+    }
+    if (this.state.stepSelected == 3) {
+      renderedStep = <div className="working-process-detail-visualization step-3 animate__animated animate__zoomIn" key={this.state.stepSelected}>
+      <img
                 className="animate__animated animate__bounceIn rectangle-14"
                 src="images/rectangle-14.svg"
                 alt="rectangle 14"
@@ -109,46 +157,6 @@ class VisualizeStep extends React.Component {
                   alt="user-illustration"
                 />
                 <p>Motekar</p>
-              </div>
-            </div>
-    }
-    if (this.state.stepSelected == 3) {
-      renderedStep = <div className="working-process-detail-visualization step-3 animate__animated animate__zoomIn" key={this.state.stepSelected}>
-              <img
-                className="animate__animated animate__bounceIn rectangle-14"
-                src="images/rectangle-14.svg"
-                alt="rectangle 14"
-              />
-              <div className="user-illustration user-ill">
-                <img
-                  src="images/user-illustration.svg"
-                  alt="user-illustration"
-                />
-                <p>Client</p>
-              </div>
-              <div className="video-file-illustration one">
-                <img
-                className="animate__animated animate__bounceIn rectangle-2"
-                  src="images/rectangle-2.svg"
-                  alt="rectangle-2"
-                />
-                <img
-                className="animate__animated animate__bounceIn play-circle"
-                  src="images/play-circle.svg"
-                  alt="play-circle"
-                />
-              </div>
-              <div className="video-file-illustration two">
-                <img
-                className="animate__animated animate__bounceIn rectangle-2"
-                  src="images/rectangle-2.svg"
-                  alt="rectangle-2"
-                />
-                <img
-                className="animate__animated animate__bounceIn play-circle"
-                  src="images/play-circle.svg"
-                  alt="play-circle"
-                />
               </div>
               <div className="button-download-illustration">Download</div>
             </div>

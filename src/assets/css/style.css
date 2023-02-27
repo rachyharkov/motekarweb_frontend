@@ -558,7 +558,7 @@ body {
   margin: auto;
 }
 
-.section-working-process .working-process-detail .working-process-detail-visualization.step-2 img.rectangle-14  {
+.section-working-process .working-process-detail .working-process-detail-visualization.step-2 img.rectangle-14:nth-of-type(1) {
   position: relative;
   z-index: 1;
   animation-delay: 0.5s;
@@ -566,105 +566,90 @@ body {
   max-width: 100%;
 }
 
-.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .video-file-illustration {
-  height: 93px;
-  z-index: 1;
-  animation-delay: 0.5s;
-  animation: sending-illustration-of-file 5s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
-}
-
-.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .form-illustration {
-  height: 93px;
-  z-index: 1;
-  animation-delay: 0.5s;
-  animation: sending-illustration-of-file 5s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
-}
-
-.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .video-file-illustration {
+.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .progress-indicator-illustration {
   position: absolute;
-  top: 70px;
-  right: 40px;
-}
-
-.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .form-illustration {
-  position: absolute;
-  top: 40px;
-  right: 20px;
-}
-
-.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .form-illustration img.rectangle-2  {
-  position: relative;
-  height: 93px;
+  top: 30px;
+  left: 45%;
   z-index: 1;
-  animation-delay: 0.5s;
+  color: var(--color-accent);
 }
 
-.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .form-illustration p {
+.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .rectangle-14:nth-of-type(2) {
   position: absolute;
-  top: 0px;
-  width: 100%;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--color-primary-light-v2);
+  top: -25px;
+  left: 5px;
+  transform: scale(0.5);
   z-index: 1;
 }
 
-@keyframes sending-illustration-of-file {
+.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .rectangle-16:nth-of-type(3) {
+  position: absolute;
+  bottom: 55%;
+  left: 40%;
+  transform: scale(0.5);
+  z-index: 1;
+  animation: animate_chat_bubble_2 5s ease-in-out infinite;
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .rectangle-16:nth-of-type(4) {
+  position: absolute;
+  bottom: 45%;
+  left: 20%;
+  transform: scale(0.5);
+  z-index: 1;
+  animation: animate_chat_bubble_1 5s ease-in-out infinite;
+}
+
+@keyframes animate_chat_bubble_1 {
   0% {
-    transform: scale(0);
+    opacity: 0;
+    bottom: 45%;
   }
-  10% {
-    transform: scale(1);
+  45% {
+    opacity: 0;
+    bottom: 45%;
   }
-  20% {
-    transform: scale(1);
-  }
-  40% {
-    transform: scale(0.3);
-    top: 60px;
-    right: 20%;
-  }
-  80% {
-    transform: scale(0.3);
-    right: 69%;
-  }
-  80% {
-    transform: scale(0.3);
-    right: 70%px;
-    top: 60px;
+  50% {
+    opacity: 1; 
+    bottom: 47%;
   }
   90% {
-    transform: scale(1);
-    right: 70%;
+    opacity: 1;
+    bottom: 60%;
   }
   100% {
-    transform: scale(0);
-    right: 70%;
-    top: 60px;
+    opacity: 0;
+    bottom: 64%;
   }
 }
 
-.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .video-file-illustration img.rectangle-2  {
-  position: relative;
-  height: 93px;
-  z-index: 1;
-  animation-delay: 0.5s;
-}
-
-.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .video-file-illustration img.play-circle {
-  position: absolute;
-  top: 0px;
-  height: 93px;
-  left: -6px;
-  z-index: 1;
-  animation-delay: 0.5s;
-  transform: scale(0.3) !important;
+@keyframes animate_chat_bubble_2 {
+  0% {
+    opacity: 0;
+    bottom: 50%;
+  }
+  10% {
+    opacity: 1; 
+    bottom: 50%;
+  }
+  75% {
+    opacity: 0;
+    bottom: 70%;
+  }
+  80% {
+    opacity: 0;
+    bottom: 72%;
+  }
+  100% {
+    opacity: 0;
+    bottom: 72%;
+  }
 }
 
 .section-working-process .working-process-detail .working-process-detail-visualization.step-2 .user-ill {
   position: absolute;
-  top: 80px;
-  left: 80px;
+  bottom: 30%;
+  left: 22%;
   animation: grow2 5s ease-in-out infinite;
 }
 
@@ -691,51 +676,33 @@ body {
   color: var(--color-accent);
 }
 
+.section-working-process .working-process-detail .working-process-detail-visualization.step-2 .button-download-illustration {
+  position: absolute;
+  bottom: 60px;
+  left: 75px;
+  width: max-content;
+  background-color: green;
+  animation: animate-download-button 5s ease-in-out infinite;
+  z-index: 1;
+  transform: scale(0);
+  font-size: 8px;
+  color: whitesmoke;
+  padding: 5px;
+  border-radius: 5px;
+}
+
 .section-working-process .working-process-detail .working-process-detail-visualization.step-2 .motekar-ill {
   position: absolute;
-  top: 80px;
-  right: 90px;
+  bottom: 30%;
+  right: 25%;
   animation: grow 5s ease-in-out infinite;
 }
 
-@keyframes grow {
-  0% {
-    transform: scale(1);
-  }
-  10% {
-    transform: scale(1.2);
-  }
-  30% {
-    transform: scale(1.2);
-  }
-  40% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes grow2 {
-  0% {
-    transform: scale(1);
-  }
-  70% {
-    transform: scale(1);
-  }
-  80% {
-    transform: scale(1.2);
-  }
-  90% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 /* End Visualization of Step 2 */
-/* Begin Visualization of Step 3 */
+
+/* Visualization of Step 3 */
+
 .section-working-process .working-process-detail .working-process-detail-visualization.step-3 {
   position: relative;
   width: 340px;
@@ -751,10 +718,138 @@ body {
   max-width: 100%;
 }
 
+.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .video-file-illustration {
+  height: 93px;
+  z-index: 1;
+  animation-delay: 0.5s;
+  animation: sending-illustration-of-file 5s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .form-illustration {
+  height: 93px;
+  z-index: 1;
+  animation-delay: 0.5s;
+  animation: sending-illustration-of-file 5s cubic-bezier(0.215, 0.610, 0.355, 1) infinite;
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .video-file-illustration {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .form-illustration {
+  position: absolute;
+  bottom: 60%;
+  right: 10%;
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .form-illustration img.rectangle-2  {
+  position: relative;
+  height: 93px;
+  z-index: 1;
+  animation-delay: 0.5s;
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .form-illustration p {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-primary-light-v2);
+  z-index: 1;
+}
+
+@keyframes animate-download-button {
+  0% {
+    transform: scale(0);
+  }
+  28%{
+    transform: scale(0);
+  }
+  31% {
+    transform: scale(1);
+  }
+  38% {
+    transform: scale(1);
+  }
+  43% {
+    transform: scale(0.7);
+  }
+  47% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes sending-illustration-of-file {
+  0% {
+    transform: scale(0);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(0.3);
+    bottom: 29%;
+    right: 20%;
+  }
+  40% {
+    transform: scale(0.3);
+    right: 50%;
+  }
+  50% {
+    transform: scale(0.3);
+    right: 60%px;
+    bottom: 29%;
+  }
+  60% {
+    transform: scale(0.3);
+    right: 68%;
+  }
+  65% {
+    transform: scale(1);
+    right: 68%;
+    bottom: 29%;
+  }
+  100% {
+    transform: scale(0);
+    right: 68%;
+    bottom: 29%;
+  }
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .video-file-illustration img.rectangle-2  {
+  position: relative;
+  height: 93px;
+  z-index: 1;
+  animation-delay: 0.5s;
+}
+
+.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .video-file-illustration img.play-circle {
+  position: absolute;
+  top: 0px;
+  height: 93px;
+  left: -6px;
+  z-index: 1;
+  animation-delay: 0.5s;
+  transform: scale(0.3) !important;
+}
+
 .section-working-process .working-process-detail .working-process-detail-visualization.step-3 .user-ill {
   position: absolute;
-  top: 80px;
-  left: 80px;
+  bottom: 40%;
+  left: 25%;
+  animation: grow2 5s ease-in-out infinite;
 }
 
 .section-working-process .working-process-detail .working-process-detail-visualization.step-3 .user-illustration {
@@ -780,107 +875,37 @@ body {
   color: var(--color-accent);
 }
 
-.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .video-file-illustration img.rectangle-2  {
-  position: relative;
-  height: 93px;
-  z-index: 1;
-  animation-delay: 0.5s;
-}
-
-.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .video-file-illustration img.play-circle {
-  position: absolute;
-  top: 0px;
-  height: 93px;
-  left: -6px;
-  z-index: 1;
-  animation-delay: 0.5s;
-  transform: scale(0.3) !important;
-}
-
-.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .video-file-illustration {
-  height: 93px;
-  z-index: 1;
-  animation-delay: 0.5s;
-}
-
-.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .video-file-illustration.one {
-  position: absolute;
-  top: 80px;
-  right: 200px;
-  animation: animate-unpack-downloading-ready-to-play-1 5s ease-in-out infinite;
-}
-.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .video-file-illustration.two {
-  position: absolute;
-  top: 80px;
-  right: 200px;
-  animation: animate-unpack-downloading-ready-to-play-2 5s ease-in-out infinite;
-}
-
-@keyframes animate-unpack-downloading-ready-to-play-1 {
-  0% {
-    transform: scale(0);
-  }
-  20% {
-    transform: scale(1);
-  }
-  30% {
-    top: 30px;
-    right: 40px;
-    transform: scale(1);
-  }
-  80% {
-    transform: scale(1);
-  }
-  100% {
-    top: 30px;
-    right: 40px;
-    transform: scale(0);
-  }
-}
-
-@keyframes animate-unpack-downloading-ready-to-play-2 {
-  0% {
-    transform: scale(0);
-  }
-  20% {
-    transform: scale(1);
-  }
-  30% {
-    top: 70px;
-    right: 70px;
-    transform: scale(1);
-  }
-  80% {
-    transform: scale(1);
-  }
-  100% {
-    top: 70px;
-    right: 70px;
-    transform: scale(0);
-  }
-}
-
-
 .section-working-process .working-process-detail .working-process-detail-visualization.step-3 .button-download-illustration {
   position: absolute;
-  bottom: 50px;
-  left: 75px;
+  bottom: 32%;
+  left: 23%;
   width: max-content;
   background-color: green;
   animation: animate-download-button 5s ease-in-out infinite;
   z-index: 1;
+  transform: scale(0);
   font-size: 8px;
   color: whitesmoke;
   padding: 5px;
   border-radius: 5px;
 }
 
-@keyframes animate-download-button {
+.section-working-process .working-process-detail .working-process-detail-visualization.step-3 .motekar-ill {
+  position: absolute;
+  bottom: 40%;
+  right: 28%;
+  animation: grow 5s ease-in-out infinite;
+}
+
+@keyframes grow {
   0% {
     transform: scale(1);
   }
   10% {
-    transform: scale(0.7);
+    transform: scale(1.2);
+  }
+  15% {
+    transform: scale(1.2);
   }
   20% {
     transform: scale(1);
@@ -890,33 +915,28 @@ body {
   }
 }
 
-/* .section-working-process .working-process-detail .working-process-detail-visualization.step-3 .video-file-illustration.two i {
-  position: absolute;
-  top: 45px;
-  left: -5px;
-  height: 93px;
-  width: 93px;
-  z-index: 2;
-  animation: animate-play-circle 5s ease-in-out infinite;
-  color: var(--color-accent);
-  font-weight: 900;
-}
-
-@keyframes download-effect {
+@keyframes grow2 {
   0% {
-    transform: translateY(0px);
+    transform: scale(1);
   }
-  90% {
-    transform: translateY(0px);
+  40% {
+    transform: scale(1);
   }
-  95%{
-    transform: translateY(10px);
+  43% {
+    transform: scale(1.2);
+  }
+  46% {
+    transform: scale(1.2);
+  }
+  48% {
+    transform: scale(1);
   }
   100% {
-
+    transform: scale(1);
   }
-} */
+}
 
+/* End Visualization of Step 3 */
 /* END OF STEP 3 VISUALIZATION ALSO ANIMATION */
 
 .section-working-process .working-process-steps li {
