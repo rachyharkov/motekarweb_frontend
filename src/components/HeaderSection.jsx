@@ -4,7 +4,7 @@ export default function HeaderSection({ title, imageBackground }) {
       <div className="container-fluid section-general-header-inner section-inner">
         <div className="row">
           <div className="col-12">
-            <h2><span className="animation-slide-up delay-1">{title}</span></h2>
+            <h2><span className="animation-slide-up">{title}</span></h2>
           </div>
         </div>
       </div>

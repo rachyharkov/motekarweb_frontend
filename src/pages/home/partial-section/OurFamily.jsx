@@ -50,7 +50,6 @@ export default function OurFamily() {
 
   useEffect(() => {
     swiperElRef.current.addEventListener("slidechange", (e) => {
-      console.log(e.target.swiper.activeIndex);
       setPositionnya(e.target.swiper.activeIndex);
     });
 

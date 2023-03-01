@@ -1,3 +1,4 @@
+import Divider from "../../components/Divider";
 import HeaderSection from "../../components/HeaderSection";
 
 export default function Services() {
@@ -7,6 +8,7 @@ export default function Services() {
         title="Our Services"
         imageBackground="images/1066_websize.jpg"
       />
+      <Divider/>
     </div>
   )
 }

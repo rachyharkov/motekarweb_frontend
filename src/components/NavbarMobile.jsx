@@ -6,9 +6,9 @@ import BlurBackground from './BlurBackground';
 
 export default function NavbarMobile() {
 
-  // useEffect(() => {
-  //   console.log('NavbarMobile mounted')
-  // })
+  useEffect(() => {
+    document.querySelector('main').toggleAttribute('hidden')
+  })
 
   const statusOrder = {
     0: {

@@ -33,13 +33,13 @@ export default function WorkingProcess() {
 
 
   const runAutoChangeVisualStep = () => {
-    // interval = setInterval(() => {
-    //   if(i == 4) {
-    //     i = 1
-    //   }
-    //   handleStepChange({target: {checked: true, value: i}})
-    //   i++
-    // }, 6000)
+    interval = setInterval(() => {
+      if(i == 4) {
+        i = 1
+      }
+      handleStepChange({target: {checked: true, value: i}})
+      i++
+    }, 6000)
   }
 
   const handleStepChange = (e) => {

@@ -1,7 +1,7 @@
 {
   "name": "motekarweb_frontend",
   "private": true,
-  "homepage": "https://rachyharkov.github.io/motekarweb_frontend",
+  "homepage": "/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

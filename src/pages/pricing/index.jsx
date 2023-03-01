@@ -1,3 +1,4 @@
+import Divider from "../../components/Divider";
 import HeaderSection from "../../components/HeaderSection";
 
 export default function Pricing() {
@@ -7,6 +8,7 @@ export default function Pricing() {
         title="Pricing"
         imageBackground="images/1066_websize.jpg"
       />
+      <Divider/>
     </div>
   )
 }

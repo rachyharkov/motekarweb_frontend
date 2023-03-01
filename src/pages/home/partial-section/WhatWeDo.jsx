@@ -28,17 +28,6 @@ export default function WhatWeDo() {
     });
   };
 
-  useEffect(() => {
-    if (videos.length > 0) {
-      console.log("videos", videos);
-    }
-    
-    swiperElRef.current.addEventListener("slidechange", (e) => {
-      console.log(e.target.swiper.activeIndex);
-    });
-
-  }, [videos]);
-
   return (
     <section className="section-vh-75 section-what-we-do">
       <div className="container-fluid section-what-we-do-inner section-inner text-center">
