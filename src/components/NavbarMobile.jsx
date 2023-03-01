@@ -6,10 +6,6 @@ import BlurBackground from './BlurBackground';
 
 export default function NavbarMobile() {
 
-  useEffect(() => {
-    document.querySelector('main').toggleAttribute('hidden')
-  })
-
   const statusOrder = {
     0: {
       'status': 'Order Placed',
@@ -46,6 +42,14 @@ export default function NavbarMobile() {
   }
 
   const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
+  
+  useEffect(() => {
+    const body = document.querySelector('body');
+    const main = document.querySelector('main');
+    toggleMobileMenu ? body.classList.add('no-scroll') : body.classList.remove('no-scroll');
+    toggleMobileMenu ? main.classList.add('freezing') : main.classList.remove('freezing');
+  }, [toggleMobileMenu])
+
   return (
     <>
       {toggleMobileMenu && <BlurBackground/>}
