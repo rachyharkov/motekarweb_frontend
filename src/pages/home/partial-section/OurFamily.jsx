@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { register } from 'swiper/element/bundle'
+import { member } from "../../../data/member";
 
 register()
 
@@ -8,45 +9,7 @@ export default function OurFamily() {
   const swiperElRef = useRef(null);
   const [positionnya, setPositionnya] = useState(0);
 
-  const namaDanJabatan = {
-    0: {
-      nama: "Muhammad Ghifari",
-      jabatan: "Jabatan 1",
-    },
-    1: {
-      nama: "Annisa Nurul Fajrin",
-      jabatan: "Jabatan 2",
-    },
-    2: {
-      nama: "Heru Nababan",
-      jabatan: "Jabatan 3",
-    },
-    3: {
-
-      nama: "Aini",
-      jabatan: "Jabatan 4",
-    },
-    4: {
-      nama: "Ero Dwi Nawa",
-      jabatan: "Director",
-    },
-    5: {
-      nama: "No Name",
-      jabatan: "Jabatan 5",
-    },
-    6: {
-      nama: "Dy Aja",
-      jabatan: "Jabatan 6",
-    },
-    7: {
-      nama: "Ahmad Maududy",
-      jabatan: "Jabatan 7",
-    },
-    8: {
-      nama: "Alfian Nur Kholiludin",
-      jabatan: "Jabatan 8",
-    },
-  }
+  const namaDanJabatan = member
 
   useEffect(() => {
     swiperElRef.current.addEventListener("slidechange", (e) => {
@@ -84,7 +47,7 @@ export default function OurFamily() {
               ref={swiperElRef}
               >
               <swiper-slide className="our-family">
-                <img src="images/member-2.jpg" alt="our-family-2" />
+                <img src="images/member-2.png" alt="our-family-2" />
               </swiper-slide>
               <swiper-slide className="our-family">
                 <img src="images/member-3.png" alt="our-family-3" />

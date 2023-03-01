@@ -3,12 +3,16 @@ import HeaderSection from "../../components/HeaderSection";
 import OurStory from "./partial-section/OurStory";
 import { Link, Outlet, Route, Routes } from "react-router-dom";
 import OurTeam from "./partial-section/OurTeam";
+import { useState } from "react";
 
 export default function About() {
+
+  const [menunya, setMenunya] = useState('Our Story')
+
   return (
     <>
       <HeaderSection
-        title="Our Story"
+        title={menunya}
         imageBackground="images/1066_websize.jpg"
       />
       <Divider/>
@@ -17,11 +21,11 @@ export default function About() {
           <div className="side-nav col-xs-12 col-sm-12 col-md-3 col-lg-3">
             <h4 className="side-nav-title">About</h4>
             <ul className="side-nav-list">
-              <li className="side-nav-item"><Link to="our-story" className="side-nav-link">Our Story</Link></li>
-              <li className="side-nav-item"><Link to="our-team" className="side-nav-link">Our Team</Link></li>
-              <li className="side-nav-item"><Link to="our-clients" className="side-nav-link">Our Clients</Link></li>
-              <li className="side-nav-item"><Link to="our-partners" className="side-nav-link">Our Partners</Link></li>
-              <li className="side-nav-item"><Link to="our-awards" className="side-nav-link">Our Awards</Link></li>
+              <li className="side-nav-item"><Link to="our-story" onClick={() => setMenunya('Our Story')} className="side-nav-link">Our Story</Link></li>
+              <li className="side-nav-item"><Link to="our-team" onClick={() => setMenunya('Our Team')} className="side-nav-link">Our Team</Link></li>
+              <li className="side-nav-item"><Link to="our-clients" onClick={() => setMenunya('Our Clients')} className="side-nav-link">Our Clients</Link></li>
+              <li className="side-nav-item"><Link to="our-partners" onClick={() => setMenunya('Our Partners')} className="side-nav-link">Our Partners</Link></li>
+              <li className="side-nav-item"><Link to="our-awards" onClick={() => setMenunya('Our Awards')} className="side-nav-link">Our Awards</Link></li>
             </ul>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">

@@ -1467,3 +1467,40 @@ main {
   margin: auto;
   font-size: 0.8rem;
 }
+/* ----------------------------------------------------------- */
+.modal-detail {
+  position: fixed;
+  height: 70vh;
+  width: 100%;
+  z-index: 50;
+  background: #41464b;
+  bottom: -100vh;
+  transition: all 0.5s ease-in-out;
+}
+.modal-detail.true {
+  bottom: 0;
+}
+
+.modal-detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 768px;
+  max-width: 100%;
+  padding: 1rem;
+  margin: auto;
+}
+
+.modal-detail .modal-detail-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  bottom: -10px;
+  width: 100%;
+  width: 768px;
+  max-width: 100%;
+  margin: auto;
+}

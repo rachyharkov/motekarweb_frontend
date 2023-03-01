@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import '../assets/css/navbar.css'
-import BlurBackground from './BlurBackground';
 
-
-export default function NavbarMobile() {
+export default function NavbarMobile({ showBlurCallback, showBlurStatus }) {
 
   const statusOrder = {
     0: {
@@ -52,14 +50,16 @@ export default function NavbarMobile() {
 
   return (
     <>
-      {toggleMobileMenu && <BlurBackground/>}
       <header className="navbar-wrapper">
         <nav className={'navbar-mobile show-' + toggleMobileMenu}>
           <div className='navbar-mobile-header'>
 
             <img src="images/favicon-96x96.png" alt="logo" />
               {/* <h1>Hello, Guest!</h1> */}
-            <button className="hamburger-menu" onClick={() => setToggleMobileMenu(!toggleMobileMenu)} aria-label="toggle mobile menu">
+            <button className="hamburger-menu" onClick={() => {
+              setToggleMobileMenu(!toggleMobileMenu);
+              showBlurCallback(!showBlurStatus);
+            }} aria-label="toggle mobile menu">
               <div>
                 <i className="fas fa-times" alt="close-icon"></i>
                 <i className="fas fa-bars" alt="hamburger-icon"></i>
