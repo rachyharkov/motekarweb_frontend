@@ -1,5 +1,4 @@
 import React from "react";
-import '../../assets/css/page-about.css';
 import './OurTeam.Module.css'
 import { member } from "../../data/member";
 

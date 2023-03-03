@@ -40,6 +40,12 @@ export default function NavbarMobile({ showBlurCallback, showBlurStatus }) {
   }
 
   const [toggleMobileMenu, setToggleMobileMenu] = useState(showBlurStatus);
+
+  const setToggleMobileMenuHandler = () => {
+    setToggleMobileMenu(!toggleMobileMenu);
+    showBlurCallback(!toggleMobileMenu);
+  }
+
   return (
     <>
       <header className="navbar-wrapper">
@@ -48,10 +54,7 @@ export default function NavbarMobile({ showBlurCallback, showBlurStatus }) {
 
             <img src="images/favicon-96x96.png" alt="logo" />
               {/* <h1>Hello, Guest!</h1> */}
-            <button className="hamburger-menu" onClick={() => {
-              setToggleMobileMenu(!toggleMobileMenu);
-              showBlurCallback(!toggleMobileMenu);
-            }} aria-label="toggle mobile menu">
+            <button className="hamburger-menu" onClick={setToggleMobileMenuHandler} aria-label="toggle mobile menu">
               <div>
                 <i className="fas fa-times" alt="close-icon"></i>
                 <i className="fas fa-bars" alt="hamburger-icon"></i>
@@ -59,11 +62,11 @@ export default function NavbarMobile({ showBlurCallback, showBlurStatus }) {
             </button>
           </div>
           <ul>
-            <li><Link onClick={() => setToggleMobileMenu(!toggleMobileMenu)} to="/">Home</Link></li>
-            <li><Link onClick={() => setToggleMobileMenu(!toggleMobileMenu)} to="/services">Services</Link></li>
-            <li><Link onClick={() => setToggleMobileMenu(!toggleMobileMenu)} to="/pricing">Pricing</Link></li>
-            <li><Link onClick={() => setToggleMobileMenu(!toggleMobileMenu)} to="/about">FAQ</Link></li>
-            <li><Link onClick={() => setToggleMobileMenu(!toggleMobileMenu)} to="/FaQ">About Us</Link></li>
+            <li><Link onClick={setToggleMobileMenuHandler} to="/">Home</Link></li>
+            <li><Link onClick={setToggleMobileMenuHandler} to="/services">Services</Link></li>
+            <li><Link onClick={setToggleMobileMenuHandler} to="/pricing">Pricing</Link></li>
+            <li><Link onClick={setToggleMobileMenuHandler} to="/about">FAQ</Link></li>
+            <li><Link onClick={setToggleMobileMenuHandler} to="/FaQ">About Us</Link></li>
             <li className="animation start-home"></li>
           </ul>
           {/* <Link to="/contact-us" className="btn btn-primary">Contact Us</Link> */}

@@ -1,5 +1,6 @@
 import Divider from "../../components/Divider";
 import HeaderSection from "../../components/HeaderSection";
+import ServiceInformation from "./partial-section/ServiceInformation";
 
 export default function Services() {
   return (
@@ -9,6 +10,7 @@ export default function Services() {
         imageBackground="images/1066_websize.jpg"
       />
       <Divider/>
+      <ServiceInformation/>
     </div>
   )
 }

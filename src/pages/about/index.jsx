@@ -1,12 +1,34 @@
 import Divider from "../../components/Divider";
 import HeaderSection from "../../components/HeaderSection";
-import { Link, Outlet } from "react-router-dom";
-import { useState } from "react";
+import './AboutPage.Module.css'
+import { Link, Outlet, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 export default function About() {
+  const location = useLocation()
+  const path = location.pathname.split('/')[2] ?? 'our-story'
 
-  const [menunya, setMenunya] = useState('Our Story')
+  const menuNameRemovedMinusSignAndCapitalized = (str) => {
+    return str.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+  }
 
+  const [menunya, setMenunya] = useState(menuNameRemovedMinusSignAndCapitalized(path))
+  const [expandSideMenu, setExpandSideMenu] = useState(false)
+  
+  const setMenunyaHandler = (str) => {
+    setMenunya(menuNameRemovedMinusSignAndCapitalized(str))
+  }
+
+  const ExpandSideMenuHandler = () => {
+    setExpandSideMenu(!expandSideMenu)
+  }
+
+  useEffect(() => {
+    document.querySelectorAll('.side-nav-item a').forEach(el => {
+      el.parentElement.classList.remove('active')
+    })
+    document.querySelector(`.side-nav-item a[href*=${path}]`).parentElement.classList.add('active')
+  })
   return (
     <>
       <HeaderSection
@@ -18,7 +40,8 @@ export default function About() {
         <div className="row">
           <div className="side-nav col-xs-12 col-sm-12 col-md-3 col-lg-3">
             <h4 className="side-nav-title">About</h4>
-            <ul className="side-nav-list">
+            <button className={'side-nav-btn-toggle ' + expandSideMenu} onClick={ExpandSideMenuHandler}><i className="fas fa-plus"></i></button>
+            <ul className={'side-nav-list ' + expandSideMenu}> 
               <li className="side-nav-item"><Link to="our-story" onClick={() => setMenunya('Our Story')} className="side-nav-link">Our Story</Link></li>
               <li className="side-nav-item"><Link to="why-us" onClick={() => setMenunya('Why Us?')} className="side-nav-link">Why Us?</Link></li>
               <li className="side-nav-item"><Link to="our-familia" onClick={() => setMenunya('Our Familia')} className="side-nav-link">Our Familia</Link></li>

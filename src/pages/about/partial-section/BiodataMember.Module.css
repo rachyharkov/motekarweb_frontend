@@ -13,7 +13,7 @@
 @media (max-width: 768px) {
   .biodata-member .photo-wrapper img {
     position: absolute !important;
-    top: -22vh !important;
+    top: -205px !important;
     height: 11rem;
     width: 11rem !important;
     object-fit: cover;
@@ -21,7 +21,7 @@
 }
 
 .biodata-member .jabatan-text {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #3a3a3a;
   margin: 0;
@@ -45,6 +45,6 @@
   text-align: justify;
   height: 45vh;
   overflow-y: scroll;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 3rem 0.5rem;
   margin-top: 15px;
 }
