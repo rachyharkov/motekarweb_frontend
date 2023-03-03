@@ -1,8 +1,6 @@
 import Divider from "../../components/Divider";
 import HeaderSection from "../../components/HeaderSection";
-import OurStory from "./partial-section/OurStory";
-import { Link, Outlet, Route, Routes } from "react-router-dom";
-import OurTeam from "./partial-section/OurTeam";
+import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 
 export default function About() {
@@ -22,7 +20,8 @@ export default function About() {
             <h4 className="side-nav-title">About</h4>
             <ul className="side-nav-list">
               <li className="side-nav-item"><Link to="our-story" onClick={() => setMenunya('Our Story')} className="side-nav-link">Our Story</Link></li>
-              <li className="side-nav-item"><Link to="our-team" onClick={() => setMenunya('Our Team')} className="side-nav-link">Our Team</Link></li>
+              <li className="side-nav-item"><Link to="why-us" onClick={() => setMenunya('Why Us?')} className="side-nav-link">Why Us?</Link></li>
+              <li className="side-nav-item"><Link to="our-familia" onClick={() => setMenunya('Our Familia')} className="side-nav-link">Our Familia</Link></li>
               <li className="side-nav-item"><Link to="our-clients" onClick={() => setMenunya('Our Clients')} className="side-nav-link">Our Clients</Link></li>
               <li className="side-nav-item"><Link to="our-partners" onClick={() => setMenunya('Our Partners')} className="side-nav-link">Our Partners</Link></li>
               <li className="side-nav-item"><Link to="our-awards" onClick={() => setMenunya('Our Awards')} className="side-nav-link">Our Awards</Link></li>

@@ -1,25 +1,25 @@
 import React from "react";
-import '../../../assets/css/page-about.css';
-import '../../../assets/css/card-team.css';
-import { member } from "../../../data/member";
+import '../../assets/css/page-about.css';
+import './OurTeam.Module.css'
+import { member } from "../../data/member";
 
 export default function OurTeam({ onClickTeamNameCallback }) {
 
   return(
     <section className="section-vh-auto">
-      <h4 className="text-white bold-title">BEST SERVICES COME FROM BEST TEAM</h4>
-      <p className="text-white">
-        Experienced and passionate about what we do, our team is dedicated to make the best out of client’s projects. Want to know more about our talented team? just click one of them.
+      <h4 className="bold-title" style={{'color': 'var(--color-accent)'}}>MEET <span style={{'color': 'var(--color-secondary)'}}>OUR FAMILY TEAM MEMBER</span></h4>
+      <p className="text-accent">
+      Our all-hands meetings are like work family reunions. Just <span style={{'color':'var(--color-secondary)'}}>click on the familia member's name</span> to find out more.
       </p>
       <div className="container">
         <div className="row">
           {
-            Object.keys(member).map((key, index) => {
+            Object.keys(member).sort((a, b) => member[a].posisi - member[b].posisi).map((key, index) => {
               return (
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6" key={index}>
                   <div className="card-team">
                     <figure className="card-team-image">
-                      <img src={'images/' + member[key].image_transparent} alt="team member"/>
+                      <img src={'images/' + member[key].image_transparent} alt={'member' + member[key].nama} />
                     </figure>
                     <h5 className="card-team-title" style={{'cursor': 'pointer'}} onClick={() => onClickTeamNameCallback('member-info', member[key])}>{member[key].nama}</h5>
                     <p className="card-team-subtitle">{member[key].jabatan}</p>

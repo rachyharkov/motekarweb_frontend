@@ -25,7 +25,6 @@ export default function Navbar() {
           <li className={currentPath == 'faq' ? 'active' : ''}><Link to={"/faq"}>FaQ</Link></li>
           <li className="animation start-home"></li>
         </ul>
-        {/* <a href="/contact-us" className="btn btn-primary">Contact Us</a> */}
       </nav>
     </header>
   )

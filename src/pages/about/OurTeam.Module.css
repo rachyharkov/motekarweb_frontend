@@ -27,12 +27,13 @@
 
 .card-team p {
   color: #fff;
-  transform: scale(calc(1 + (var(--hover) * 0.1))) translateX(150%);
+  transform: scale(calc(1 + (var(--hover) * 0.1))) translateX(200%);
   transition: transform 0.2s;
   position: absolute;
   top: 43px;
   right: 30px;
   z-index: 2;
+  font-size: 0.6rem;
 }
 
 .card-team figure.card-team-image {

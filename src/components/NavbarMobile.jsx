@@ -39,15 +39,7 @@ export default function NavbarMobile({ showBlurCallback, showBlurStatus }) {
     }
   }
 
-  const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
-  
-  useEffect(() => {
-    const body = document.querySelector('body');
-    const main = document.querySelector('main');
-    toggleMobileMenu ? body.classList.add('no-scroll') : body.classList.remove('no-scroll');
-    toggleMobileMenu ? main.classList.add('freezing') : main.classList.remove('freezing');
-  }, [toggleMobileMenu])
-
+  const [toggleMobileMenu, setToggleMobileMenu] = useState(showBlurStatus);
   return (
     <>
       <header className="navbar-wrapper">
@@ -58,7 +50,7 @@ export default function NavbarMobile({ showBlurCallback, showBlurStatus }) {
               {/* <h1>Hello, Guest!</h1> */}
             <button className="hamburger-menu" onClick={() => {
               setToggleMobileMenu(!toggleMobileMenu);
-              showBlurCallback(!showBlurStatus);
+              showBlurCallback(!toggleMobileMenu);
             }} aria-label="toggle mobile menu">
               <div>
                 <i className="fas fa-times" alt="close-icon"></i>

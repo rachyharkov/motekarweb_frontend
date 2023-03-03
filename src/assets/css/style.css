@@ -132,6 +132,15 @@ main {
   color: var(--color-accent);
 }
 
+.text-accent {
+  color: var(--color-accent);
+  font-size: calc(0.65em + 0.65vmin);
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 .section-text-general-small {
   font-size: calc(0.30em + 1.5vmin);
   line-height: calc(0.7em + 2vmin);
@@ -1482,14 +1491,10 @@ main {
 }
 
 .modal-detail-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   width: 768px;
   max-width: 100%;
-  padding: 1rem;
+  padding: 6rem 1rem 1rem 1rem;
   margin: auto;
 }
 

@@ -11,12 +11,14 @@ import Services from '../pages/services'
 import Pricing from '../pages/pricing'
 import Faq from '../pages/faq'
 import FrequentlyAskedQuestions from '../pages/home/partial-section/FrequentlyAskedQuestions'
-import AboutUs from '../pages/about/partial-section/OurStory'
-import OurStory from '../pages/about/partial-section/OurStory'
-import OurTeam from '../pages/about/partial-section/OurTeam'
+import AboutUs from './about/OurStory'
+import OurStory from './about/OurStory'
+import OurTeam from './about/OurTeam'
 import BlurBackground from '../components/BlurBackground'
 import Modal from '../components/Modal'
 import BiodataMember from './about/partial-section/BiodataMember'
+import NotFound from './NotFound'
+import WhyUs from './about/WhyUs'
 
 function Index() {
 
@@ -27,6 +29,7 @@ function Index() {
 
   const [showModalStatus, setShowModalStatus] = useState(false)
   const [showBlurBackground, setShowBlurBackground] = useState(false)
+  
   const [contentModal, setContentModal] = useState({
     type_content: '',
     data: ''
@@ -38,13 +41,14 @@ function Index() {
       x: window.innerWidth,
       y: window.innerHeight
     });
-    setShowBlurBackground(isMobileDevice)
   }
 
   useEffect(() => {
+    const body = document.querySelector('body');
+    showBlurBackground ? body.classList.add('no-scroll') : body.classList.remove('no-scroll');
     window.onresize = updateSize
-  }, []);
-
+  }, [showBlurBackground])
+  
   const setContentModalCallback = (type_content, data) => {
     setContentModal({
       type_content: type_content,
@@ -63,7 +67,7 @@ function Index() {
       <div style={{position: 'relative'}}>
         {showBlurBackground && <BlurBackground/>}
         <img className='header-logo animate__animated animate__fadeIn' src="images/logo-with-title-removebg.png" alt="logo" />
-        {isMobileDevice ? <NavbarMobile showBlurCallback={setShowBlurBackground} showBlurStatus={showBlurBackground}/> : <Navbar/>}
+        {isMobileDevice ? !showModalStatus && <NavbarMobile showBlurCallback={setShowBlurBackground} showBlurStatus={showBlurBackground} /> : <Navbar/>}
         <main>
           <Routes>
             <Route path="/" element={<Home/>}/>
@@ -71,9 +75,10 @@ function Index() {
             <Route path="pricing" element={<Pricing/>}/>
             <Route path="about" element={<About/>}>
               <Route path="" element={<OurStory/>}/>
-              <Route path="our-team" element={<OurTeam onClickTeamNameCallback={setContentModalCallback}/>}/>
               <Route path="our-story" element={<OurStory/>}/>
-              <Route path="*" element={<h1>404</h1>}/>
+              <Route path="why-us" element={<WhyUs/>}/>
+              <Route path="our-familia" element={<OurTeam onClickTeamNameCallback={setContentModalCallback}/>}/>
+              <Route path="*" element={<NotFound/>}/>
             </Route>
             <Route path="/faq" element={<Faq/>}/>
             <Route path="*" element={<ErrorPage/>}/>
