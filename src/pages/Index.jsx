@@ -1,24 +1,23 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect, lazy, Suspense } from 'react'
 import { Outlet, Route, Routes, useLocation } from 'react-router-dom'
-import Navbar from '../components/Navbar'
-import NavbarMobile from '../components/NavbarMobile'
-import Footer from '../components/Footer'
 
-import ErrorPage from '../pages/ErrorPage'
-import About from '../pages/about'
-import Home from '../pages/home'
-import Services from '../pages/services'
-import Pricing from '../pages/pricing'
-import Faq from '../pages/faq'
-import FrequentlyAskedQuestions from '../pages/home/partial-section/FrequentlyAskedQuestions'
-import AboutUs from './about/OurStory'
-import OurStory from './about/OurStory'
-import OurTeam from './about/OurTeam'
 import BlurBackground from '../components/BlurBackground'
-import Modal from '../components/Modal'
-import BiodataMember from './about/partial-section/BiodataMember'
-import NotFound from './NotFound'
-import WhyUs from './about/WhyUs'
+
+const Home = lazy(() => import('../pages/home'))
+const Services = lazy(() => import('../pages/services'))
+const Pricing = lazy(() => import('../pages/pricing'))
+const Faq = lazy(() => import('../pages/faq'))
+const OurStory = lazy(() => import('./about/OurStory'))
+const OurTeam = lazy(() => import('./about/OurTeam'))
+const Modal = lazy(() => import('../components/Modal'))
+const BiodataMember = lazy(() => import('./about/partial-section/BiodataMember'))
+const NotFound = lazy(() => import('./NotFound'))
+const ErrorPage = lazy(() => import('../pages/ErrorPage'))
+const WhyUs = lazy(() => import('./about/WhyUs'))
+const About = lazy(() => import('../pages/about'))
+const Footer = lazy(() => import('../components/Footer'))
+const NavbarMobile = lazy(() => import('../components/NavbarMobile'))
+const Navbar = lazy(() => import('../components/Navbar'))
 
 function Index() {
 
@@ -69,20 +68,22 @@ function Index() {
         <img className='header-logo animate__animated animate__fadeIn' src="images/logo-with-title-removebg.png" alt="logo" />
         {isMobileDevice ? !showModalStatus && <NavbarMobile showBlurCallback={setShowBlurBackground} showBlurStatus={showBlurBackground} /> : <Navbar/>}
         <main>
-          <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="services" element={<Services/>}/>
-            <Route path="pricing" element={<Pricing/>}/>
-            <Route path="about" element={<About/>}>
-              <Route path="" element={<OurStory/>}/>
-              <Route path="our-story" element={<OurStory/>}/>
-              <Route path="why-us" element={<WhyUs/>}/>
-              <Route path="our-familia" element={<OurTeam onClickTeamNameCallback={setContentModalCallback}/>}/>
-              <Route path="*" element={<NotFound/>}/>
-            </Route>
-            <Route path="/faq" element={<Faq/>}/>
-            <Route path="*" element={<ErrorPage/>}/>
-          </Routes>
+          <Suspense fallback={<div style={{height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', color: '#fff'}}><h1>Loading...</h1></div>}>
+            <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="services" element={<Services/>}/>
+              <Route path="pricing" element={<Pricing/>}/>
+              <Route path="about" element={<About/>}>
+                <Route path="" element={<OurStory/>}/>
+                <Route path="our-story" element={<OurStory/>}/>
+                <Route path="why-us" element={<WhyUs/>}/>
+                <Route path="our-familia" element={<OurTeam onClickTeamNameCallback={setContentModalCallback}/>}/>
+                <Route path="*" element={<NotFound/>}/>
+              </Route>
+              <Route path="/faq" element={<Faq/>}/>
+              <Route path="*" element={<ErrorPage/>}/>
+            </Routes>
+          </Suspense>
         </main>
         <Footer/>
         {

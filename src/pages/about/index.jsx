@@ -15,10 +15,6 @@ export default function About() {
   const [menunya, setMenunya] = useState(menuNameRemovedMinusSignAndCapitalized(path))
   const [expandSideMenu, setExpandSideMenu] = useState(false)
   
-  const setMenunyaHandler = (str) => {
-    setMenunya(menuNameRemovedMinusSignAndCapitalized(str))
-  }
-
   const ExpandSideMenuHandler = () => {
     setExpandSideMenu(!expandSideMenu)
   }
