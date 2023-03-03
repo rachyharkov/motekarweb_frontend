@@ -1,0 +1,1 @@
+import{u as o,a as s,j as r}from"./index-7140d0bd.js";function a(){const e=o();return s("div",{style:{color:"white"},children:[r("h1",{children:"Error"}),r("p",{children:e.message})]})}export{a as default};

@@ -1,0 +1,1 @@
+import{a as r,j as e}from"./index-7140d0bd.js";function t(){return r("div",{style:{color:"white"},children:[e("h1",{children:"Not Found"}),e("p",{children:'Sorry, there is nothing here "yet".'})]})}export{t as default};

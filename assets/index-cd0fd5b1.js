@@ -1,0 +1,1 @@
+import{a as r,j as e}from"./index-7140d0bd.js";import{D as s}from"./Divider-d43151d6.js";import{H as i}from"./HeaderSection-f3183e27.js";import{F as t}from"./FrequentlyAskedQuestions-b6c3d93e.js";function d(){return r("div",{children:[e(i,{title:"Frequently Asked Questions",imageBackground:"images/1066_websize.jpg"}),e(s,{}),e(t,{})]})}export{d as default};
