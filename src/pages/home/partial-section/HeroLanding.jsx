@@ -19,7 +19,7 @@ export default function HeroLanding() {
   setTimeout(startVideo,7000);
 
   return(
-    <section className='section-vh-85 section-hero-landing'>
+    <section className='section-vh-100 section-hero-landing'>
       <div className="container-fluid section-hero-inner section-inner">
         <div className="row">
           <div className="col-12">

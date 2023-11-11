@@ -11,9 +11,9 @@
   --line-border-empty: #6b6b6b;
 }
 
-/* * {
+* {
   outline: 1px dashed red;
-} */
+}
 
 /* CSSTransition */
 .fadeIn {
@@ -124,10 +124,10 @@ main {
 }
 
 .section-text-general {
-  font-size: calc(0.55em + 1.5vmin);
+  font-size: calc(0.40em + 1.3vmin);
   line-height: calc(0.7em + 2vmin);
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   margin: 1rem 0;
   color: var(--color-accent);
 }
@@ -461,8 +461,7 @@ main {
 }
 
 .section-what-we-do .section-what-we-do-inner .section-what-we-do-galleries {
-  margin: 1.5rem auto;
-  max-width: 90%;
+  margin: auto;
 }
 
 .section-what-we-do .section-what-we-do-inner h2 {
@@ -479,19 +478,27 @@ main {
   margin: 2rem auto;
 }
 
-.section-what-we-do .section-what-we-do-inner swiper-container {
-  width: 100%;
-  height: 100%;
-}
+
 
 .section-what-we-do .section-what-we-do-inner swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: var(--color-accent);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.section-what-we-do .section-what-we-do-inner .mySwiper {
+  min-height: 220px !important;
+  height: 32vw;
+  max-height: 400px;
+}
+
+.section-what-we-do .section-what-we-do-inner .mySwiper swiper-slide {
+  min-height: 220px !important;
+  height: 32vw;
+  max-height: 400px;
+  opacity: 0.4;
+  display: inline;
 }
 
 .section-what-we-do .section-what-we-do-inner swiper-slide img {
@@ -499,23 +506,6 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-} 
-
-.section-what-we-do .section-what-we-do-inner swiper-container {
-  width: 100%;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.section-what-we-do .section-what-we-do-inner swiper-slide {
-  background-size: cover;
-  background-position: center;
-}
-
-.section-what-we-do .section-what-we-do-inner .mySwiper {
-  height: 80%;
-  width: 100%;
 }
 
 .section-what-we-do .section-what-we-do-inner .mySwiper2 {

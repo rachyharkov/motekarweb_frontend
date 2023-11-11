@@ -16,6 +16,14 @@ export default function WhatWeDo() {
     },
   }
 
+  const iframecustomstyle = {
+    height: '31vw',
+    minHeight: '26vh',
+    maxHeight: '45vh',
+    maxWidth: '647px',
+    margin: 'auto'
+  }
+
   const addVideo = (element) => {
     setVideos((videos) => [...videos, element]);
   };
@@ -46,24 +54,25 @@ export default function WhatWeDo() {
               or other pursuits. Streamline your workload. Produce high-quality
               films in less time. Experience peace of mind.
             </p>
-            <div
-              className="section-what-we-do-galleries"
-              style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}
-            >
+            <div className="section-what-we-do-galleries">
               <swiper-container
                 ref={swiperElRef}
                 class="mySwiper"
                 thumbs-swiper=".mySwiper2"
                 space-between="10"
                 navigation="true"
+                autoHeight="true"
                 style={{
                   "--swiper-navigation-color": "#fff",
                   "--swiper-pagination-color": "#fff",
+                  "width": "100%",
+                  "autoHeight": "true",
+                  "maxHeight": "400px"
                 }}
               >
                 <swiper-slide>
                   <YouTube
-                    style={{ height: "100%", width: "100%" }}
+                    style={iframecustomstyle}
                     videoId="2J7xlDH4QkA"
                     opts={myOptions}
                     onReady={(event) => addVideo(event.target)}
@@ -72,7 +81,7 @@ export default function WhatWeDo() {
                 </swiper-slide>
                 <swiper-slide>
                   <YouTube
-                    style={{ height: "100%", width: "100%" }}
+                    style={iframecustomstyle}
                     videoId="F2tWmS3Lzic"
                     opts={myOptions}
                     onReady={(event) => addVideo(event.target)}
@@ -113,7 +122,7 @@ export default function WhatWeDo() {
                 watch-slides-progress="true"
                 style={{
                   'transform': 'scale(0.7)',
-                  'marginTop': '-13px'
+                  'marginTop': '-13px',
                 }}
               >
                 <swiper-slide>

@@ -2,22 +2,24 @@ import React, { useState, useEffect, lazy, Suspense } from 'react'
 import { Outlet, Route, Routes, useLocation } from 'react-router-dom'
 
 import BlurBackground from '../components/BlurBackground'
+import BiodataMember from './about/partial-section/BiodataMember'
+import NotFound from './NotFound'
+import ErrorPage from '../pages/ErrorPage'
+import Modal from '../components/Modal'
+import WhyUs from './about/WhyUs'
+import OurTeam from './about/OurTeam'
+import OurStory from './about/OurStory'
+import Navbar from '../components/Navbar'
+import NavbarMobile from '../components/NavbarMobile'
+
+
 
 const Home = lazy(() => import('../pages/home'))
 const Services = lazy(() => import('../pages/services'))
 const Pricing = lazy(() => import('../pages/pricing'))
 const Faq = lazy(() => import('../pages/faq'))
-const OurStory = lazy(() => import('./about/OurStory'))
-const OurTeam = lazy(() => import('./about/OurTeam'))
-const Modal = lazy(() => import('../components/Modal'))
-const BiodataMember = lazy(() => import('./about/partial-section/BiodataMember'))
-const NotFound = lazy(() => import('./NotFound'))
-const ErrorPage = lazy(() => import('../pages/ErrorPage'))
-const WhyUs = lazy(() => import('./about/WhyUs'))
 const About = lazy(() => import('../pages/about'))
 const Footer = lazy(() => import('../components/Footer'))
-const NavbarMobile = lazy(() => import('../components/NavbarMobile'))
-const Navbar = lazy(() => import('../components/Navbar'))
 
 function Index() {
 

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutUs() {
   return(
-    <section className="section-vh-auto section-about-us">
+    <section className="section-vh-100 section-about-us d-flex flex-colum justify-content-center">
       <div className="container-fluid section-about-us-inner section-inner h-100">
         <div className="row h-100">
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center flex-column">
