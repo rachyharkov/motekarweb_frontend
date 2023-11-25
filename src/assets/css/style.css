@@ -11,9 +11,9 @@
   --line-border-empty: #6b6b6b;
 }
 
-* {
+/* * {
   outline: 1px dashed red;
-}
+} */
 
 /* CSSTransition */
 .fadeIn {

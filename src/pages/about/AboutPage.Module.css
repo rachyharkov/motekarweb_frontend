@@ -15,6 +15,9 @@
   list-style: none;
   padding: 0;
   margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .side-nav .side-nav-list li a {

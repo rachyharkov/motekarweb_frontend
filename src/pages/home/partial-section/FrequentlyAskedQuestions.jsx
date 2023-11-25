@@ -9,16 +9,27 @@ export default function FrequentlyAskedQuestions() {
   const [loading, setLoading] = React.useState(true);
 
   const toggleAccordion = (e) => {
+    // let itemsFaqElement = document.querySelectorAll(".faq-accordion button");
+    // const itemToggleStatus = e.target.getAttribute('aria-expanded');
+    
+    // for (var i = 0; i < itemsFaqElement.length; i++) {
+    //   itemsFaqElement[i].setAttribute('aria-expanded', 'false');
+    // }
+    
+    // if (itemToggleStatus == 'false') {
+    //   e.target.setAttribute('aria-expanded', 'true');
+    // }
+
     let itemsFaqElement = document.querySelectorAll(".faq-accordion button");
-    const itemToggleStatus = e.target.getAttribute('aria-expanded');
-    
-    for (var i = 0; i < itemsFaqElement.length; i++) {
-      itemsFaqElement[i].setAttribute('aria-expanded', 'false');
-    }
-    
-    if (itemToggleStatus == 'false') {
-      e.target.setAttribute('aria-expanded', 'true');
-    }
+    const currentElement = e.currentTarget;
+
+    itemsFaqElement.forEach((item) => {
+      if (currentElement === item) {
+        currentElement.setAttribute("aria-expanded", "true");
+      } else {
+        item.setAttribute("aria-expanded", "false");
+      }
+    });
   }
   
   useEffect(() => {
