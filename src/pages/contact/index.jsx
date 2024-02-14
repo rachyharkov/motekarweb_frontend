@@ -14,7 +14,7 @@ export default function Contact() {
         <section className="section-vh-auto general">
           <div className="container-fluid general-inner section-inner h-100">
             <div className="row"> 
-              <div className="col-7">
+              <div className="col-md-7 mb-4">
                   <h4 className="text-white bold-title mb-0" style={{'color': 'var(--color-accent)'}}><span style={{'color': 'var(--color-secondary)'}}>GET</span> IN TOUCH
                   </h4>
                   <h4 className="text-white bold-title" style={{'color': 'var(--color-accent)'}}>LET'S WORK <span style={{'color': 'var(--color-secondary)'}}>TOGETHER</span></h4>
@@ -33,14 +33,22 @@ export default function Contact() {
                           <i className="fas fa-phone-alt me-2"></i>
                         </td>
                         <td>
-                          Phone: +62 8190 6882 550
+                          Phone: <a href="tel:+6281906882550">+62 8190 6882 550</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="vertical-align-top">
+                          <i className="fas fa-envelope me-2"></i>
+                        </td>
+                        <td>
+                          Email: <a href="mailto:ask@motekarstudio.com">ask@motekarstudio.com</a>
                         </td>
                       </tr>
                     </tbody>
                   </table>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5960117262866!2d107.62258707587614!3d-6.9387902679261755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e94d8ac57371%3A0x697fb701466289fd!2sMotekar%20Studio%20(PT.%20Motekar%20Digital%20Kreasi)!5e0!3m2!1sen!2sid!4v1707891694480!5m2!1sen!2sid" width="600" height="450" style={{'border': 0 , 'borderRadius' : '15px'}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.5960117262866!2d107.62258707587614!3d-6.9387902679261755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e94d8ac57371%3A0x697fb701466289fd!2sMotekar%20Studio%20(PT.%20Motekar%20Digital%20Kreasi)!5e0!3m2!1sen!2sid!4v1707891694480!5m2!1sen!2sid" width="100%" height="450" style={{'border': 0 , 'borderRadius' : '15px'}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               </div>
-              <div className="col-5">
+              <div className="col-md-5">
                 <h4 className="text-white bold-title mb-3" style={{'color': 'var(--color-accent)'}}><span style={{'color': 'var(--color-secondary)'}}>SEND</span> US A MESSAGE
                 </h4>
                 <form action="#" method="POST">

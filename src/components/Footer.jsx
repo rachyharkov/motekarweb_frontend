@@ -19,12 +19,11 @@ export default function Footer() {
       </div>
       <div className="footer-inner">
         <div className="footer-inner-content">
-          <h5>PT. Motekar Digital Kreasi</h5>
-          <p>Jl. Buah Batu No. 161, Kelurahan Turangga, Kecamatan Lengkong, Bandung, 40264 - West Java Indonesia</p>
-          <p>ask@motekarstudio.com | 08xxxxxxxxxx</p>
-          <p>Copyright &copy; {new Date().getFullYear()} Motekar Studio</p>
+          <img src="images/logo-with-title-removebg.png" alt="Motekar Studio" height={100} width={100} />
+          <h5>Motekar Digital Kreasi (Motekar Studio)</h5>
+          <p>“Where Every Frame Tells a Love Story”</p>
+          <p>Copyright &copy; {new Date().getFullYear()} Motekar Studio. All rights reserved | <Link to="about/tos">Terms of Service</Link></p>
           <p><i className="bx bxs-palette"></i> by <a href="https://www.motekarstudio.com/" target="_blank" rel="noreferrer">Alfian K.</a> | <i className='bx bx-code-alt' ></i> by <a href="https://www.rnh-is.me/" target="_blank" rel="noreferrer">rachyharkov</a></p>
-          <p>All rights reserved | <Link to="about/tos">Terms of Service</Link></p>
         </div>
       </div>
     </footer>

@@ -64,9 +64,9 @@ export default function NavbarMobile({ showBlurCallback, showBlurStatus }) {
           <ul>
             <li><Link onClick={setToggleMobileMenuHandler} to="/">Home</Link></li>
             <li><Link onClick={setToggleMobileMenuHandler} to="/services">Services</Link></li>
-            <li><Link onClick={setToggleMobileMenuHandler} to="/pricing">Pricing</Link></li>
             <li><Link onClick={setToggleMobileMenuHandler} to="/about">FAQ</Link></li>
             <li><Link onClick={setToggleMobileMenuHandler} to="/FaQ">About Us</Link></li>
+            <li><Link onClick={setToggleMobileMenuHandler} to="/contact-us">Contact Us</Link></li>
             <li className="animation start-home"></li>
           </ul>
           {/* <Link to="/contact-us" className="btn btn-primary">Contact Us</Link> */}
