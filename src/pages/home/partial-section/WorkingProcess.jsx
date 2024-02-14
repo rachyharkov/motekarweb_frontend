@@ -18,8 +18,8 @@ export default function WorkingProcess() {
 
   const titleAndDescription = {
     1: {
-      title: 'Fill the Form',
-      description: 'Fill the form with your details and upload your video.'
+      title: 'Create an Account',
+      description: 'Simply send an email to ask@motekarstudio.com to request for your company account. Our team will assist you step by step. It\'ll takes time but worth it.'
     },
     2: {
       title: 'Deliver Progress',
@@ -78,7 +78,7 @@ export default function WorkingProcess() {
               <li className={"working-process-step working-process-step-1 " + (stepSelected == 1 && activeStateBg)}>
                 <span className="working-process-step-number">01</span>
                 <input type="radio" name="working-process-step" id="step-1" value={1} onChange={handleStepChange} />
-                <label htmlFor="step-1">Fill The E-Form</label>
+                <label htmlFor="step-1">Create an Account</label>
                 <span className={stepSelected == 1 ? activeStateIcon : inactiveStateIcon}></span>
               </li>
               <li className={"working-process-step working-process-step-2 " + (stepSelected == 2 && activeStateBg)}>

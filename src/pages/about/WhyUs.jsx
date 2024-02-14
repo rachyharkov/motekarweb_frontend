@@ -21,7 +21,7 @@ export default function WhyUs() {
       <YouTube videoId="GPZVTX9Mh2g" className="m-0 w-100 text-center" opts={{'width': '100%', 'height': '250px'}} />
 
       <p className="text-accent" style={{'fontStyle': 'italic', 'fontSize': '13px'}}>
-        Sounds awesome right? Allow us to introduce ourselves. Head to <Link to="/about/our-familia" className="text-accent">"Our Story"</Link> page to find out more.
+        Sounds awesome right? Allow us to introduce some of the best talented people we have. Head to <Link to="/about/our-familia" className="text-accent">"Our Family"</Link> page to find out more.
       </p>
     </section>
   )

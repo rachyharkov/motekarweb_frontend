@@ -40,14 +40,6 @@ export const member = {
     text: "Meet Ero Dwi Nawa, the Director of Motekar Studio, a leading wedding video editing company in Indonesia. With a Bachelor degree in Library Science and a decade of experience in creative media television, He is a seasoned professional with a unique blend of technical and creative expertise. \n \n As a librarian, He honed the skills in information organization, research, and data management, which they now bring to the forefront of Motekar Studio's video editing process. His understanding of the importance of preserving memories and telling stories through media is evident in the personalized, story-driven videos they create for each of their clients."
   },
   5: {
-    nama: "No Name",
-    jabatan: "Video Editor",
-    image: "people-placeholder.jpg",
-    image_transparent: "placeholder-transparent-member.png",
-    posisi: 7,
-    text: "Nothing much here, but the best thing he/she can do is to help us shape the future of Motekar Studio."
-  },
-  6: {
     nama: "Ahmad Maududy",
     jabatan: "Pre-production Manager",
     image: "member-6.png",
@@ -55,7 +47,7 @@ export const member = {
     posisi: 2,
     text: "Meet Dudy, a seasoned professional in the world of video production and post-production. With over 11 years of experience working in creative media companies, He has honed their skills to become a master in the field. As the pre-production manager of a wedding video editor company, Dudy brings a wealth of knowledge and expertise to the table, ensuring that each project they work on is a success. \n \n Dudy's passion for video production started at a young age and has only continued to grow over the years. With a keen eye for detail and a knack for bringing a creative vision to life, He has become a sought-after player in the industry. As a pre-production manager, Dudy is responsible for overseeing the planning and preparation stages of each project, ensuring that everything runs smoothly from start to finish."
   },
-  7: {
+  6: {
     nama: "Alfian Nur Kholiludin",
     jabatan: "UI/UX Designer",
     image: "people-placeholder.jpg",

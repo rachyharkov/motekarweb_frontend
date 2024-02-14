@@ -50,13 +50,13 @@ export default function OurFamily() {
                 <img src="images/member-2.png" alt="our-family-2" />
               </swiper-slide>
               <swiper-slide className="our-family">
-                <img src="images/member-3.png" alt="our-family-3" />
+                <img src="images/people-placeholder.jpg" alt="our-family-3" />
               </swiper-slide>
               <swiper-slide className="our-family">
                 <img src="images/member-4.png" alt="our-family-4" />
               </swiper-slide>
               <swiper-slide className="our-family">
-                <img src="images/member-5.png" alt="our-family-5" />
+                <img src="images/people-placeholder.jpg" alt="our-family-5" />
               </swiper-slide>
               <swiper-slide className="our-family">
                 <img src="images/member-1.png" alt="our-family-1" />
@@ -65,10 +65,7 @@ export default function OurFamily() {
                 <img src="images/member-6.png" alt="our-family-6" />
               </swiper-slide>
               <swiper-slide className="our-family">
-                <img src="images/member-7.png" alt="our-family-7" />
-              </swiper-slide>
-              <swiper-slide className="our-family">
-                <img src="images/member-1.png" alt="our-family-8" />
+                <img src="images/people-placeholder.jpg" alt="our-family-8" />
               </swiper-slide>
             </swiper-container>
             <h5 className="our-family-name text-white">{namaDanJabatan[positionnya].nama}</h5>

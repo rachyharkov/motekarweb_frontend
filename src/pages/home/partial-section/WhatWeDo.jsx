@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import YouTube from "react-youtube";
 import { register } from 'swiper/element/bundle'
 
@@ -17,7 +18,7 @@ export default function WhatWeDo() {
   }
 
   const iframecustomstyle = {
-    height: '31vw',
+    height: '100%',
     minHeight: '26vh',
     maxHeight: '45vh',
     maxWidth: '647px',
@@ -49,117 +50,22 @@ export default function WhatWeDo() {
               WEDDING FILM
             </h2>
             <p className="section-text-general">
-              We bring your couple's tales to life, tailored to your vision. Our
-              streamlined approach allows you to prioritize your work, family,
-              or other pursuits. Streamline your workload. Produce high-quality
-              films in less time. Experience peace of mind.
+            We bring your couple's tales to life, tailored to your vision. Our streamlined approach allows you to prioritize your work, family, or other pursuits. Streamline your workload. Produce high-quality films in less time. Experience peace of mind.
             </p>
-            <div className="section-what-we-do-galleries">
-              <swiper-container
-                ref={swiperElRef}
-                class="mySwiper"
-                thumbs-swiper=".mySwiper2"
-                space-between="10"
-                navigation="true"
-                autoHeight="true"
-                style={{
-                  "--swiper-navigation-color": "#fff",
-                  "--swiper-pagination-color": "#fff",
-                  "width": "100%",
-                  "autoHeight": "true",
-                  "maxHeight": "400px"
-                }}
-              >
-                <swiper-slide>
-                  <YouTube
-                    style={iframecustomstyle}
-                    videoId="2J7xlDH4QkA"
-                    opts={myOptions}
-                    onReady={(event) => addVideo(event.target)}
-                    onStateChange={(event) => { if (event.data === 1) { stopAllVideosExcept(event.target) } }}
-                  />
-                </swiper-slide>
-                <swiper-slide>
-                  <YouTube
-                    style={iframecustomstyle}
-                    videoId="F2tWmS3Lzic"
-                    opts={myOptions}
-                    onReady={(event) => addVideo(event.target)}
-                    onStateChange={(event) => { if (event.data === 1) { stopAllVideosExcept(event.target) } }}
-                  />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                </swiper-slide>
-              </swiper-container>
-
-              <swiper-container
-                class="mySwiper2"
-                space-between="10"
-                slides-per-view="4"
-                free-mode="true"
-                watch-slides-progress="true"
-                style={{
-                  'transform': 'scale(0.7)',
-                  'marginTop': '-13px',
-                }}
-              >
-                <swiper-slide>
-                  <img src="https://i3.ytimg.com/vi/2J7xlDH4QkA/maxresdefault.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://i3.ytimg.com/vi/F2tWmS3Lzic/maxresdefault.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                </swiper-slide>
-                <swiper-slide>
-                  <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                </swiper-slide>
-              </swiper-container>
+            <div className="section-what-we-do-galleries" style={{
+              'height': '340px',
+            }}>
+              <YouTube
+                style={iframecustomstyle}
+                videoId="GPZVTX9Mh2g"
+                opts={myOptions}
+                onReady={(event) => addVideo(event.target)}
+                onStateChange={(event) => { if (event.data === 1) { stopAllVideosExcept(event.target) } }}
+              />
             </div>
-            <button className="btn btn-primary mt-3">
-              View Our Extended Work
-            </button>
+            <Link className="btn btn-primary mt-3" to={"/about"}> 
+              View Our Company Profile
+            </Link>
           </div>
         </div>
       </div>

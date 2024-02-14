@@ -51,9 +51,11 @@ export default function FrequentlyAskedQuestions() {
     <section className="section-vh-auto section-frequently-asked-questions">
       <div className="container-fluid section-frequently-asked-questions-inner section-inner h-100">
         <h4 className="section-subtitle section-subtitle-with-bg">Frequently Asked Questions</h4>
-        <p className="text-center mt-4">Feel free to click one of the questions below we have prepared for you.</p>
         <div className="row h-100">
           <div className="col-sm-12 col-md-8 col-lg-8 mx-auto p-2 faq-accordion">
+            <p className="mt-4 text-center">
+              Wise Man once said: Finding the right answer begins with the right question. Please <i>get in touch</i> if you have any further questions. We are all ears!
+            </p>
             {
               loading == true ? 'Loading...' : dataFaqs.map((dataFaq, index) => {
                 return(
@@ -66,9 +68,6 @@ export default function FrequentlyAskedQuestions() {
                 )
               })
             }
-            <p className="mt-4 text-center">
-              Wise Man once said: Finding the right answer begins with the right question. Please <i>get in touch</i> if you have any further questions. We are all ears!
-            </p>
           </div>
         </div>
       </div>

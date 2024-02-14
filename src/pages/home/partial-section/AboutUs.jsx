@@ -2,21 +2,13 @@ import React from "react";
 
 export default function AboutUs() {
   return(
-    <section className="section-vh-100 section-about-us d-flex flex-colum justify-content-center">
+    <section className="section-about-us d-flex flex-colum justify-content-center">
       <div className="container-fluid section-about-us-inner section-inner h-100">
         <div className="row h-100">
-          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center flex-column">
-            <div className="section-about-us-images">
-              <img src="images/1066_websize.jpg" className="section-about-us-image" alt="placeholder" />
-              <img src="images/1066_websize.jpg" className="section-about-us-image" alt="placeholder" />
-              <img src="images/1066_websize.jpg" className="section-about-us-image" alt="placeholder" />
-              <img src="images/1066_websize.jpg" className="section-about-us-image" alt="placeholder" />
-            </div>
-          </div>
-          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 d-flex p-5 justify-content-center flex-column">
-            <h4 className="section-subtitle section-subtitle-with-bg">About Us</h4>
-            <p className="section-text-general text-justify">
-              Motekar is a team of passionate people who master the process of video editing. Our aim is clear as pure as white wine in your glass to make the post-production of videographers simpler, faster and more profitable.
+          <div className="col-12 d-flex p-5 justify-content-center flex-column">
+            <h4 className="section-subtitle section-subtitle-with-bg mx-auto text-center">About Us</h4>
+            <p className="section-text-general text-center">
+              Motekar Studio, where we're a team of video enthusiasts passionate about making video editing easy and profitable for you. Think of us like your friendly neighborhood wizards, here to simplify the whole post-production process for videographers. Our goal is as clear as a glass of white wine - we want to speed up and enhance your creative journey. Join us in this uncomplicated adventure, where we make every video a winner by adding a touch of our magic!
             </p>
           </div>
         </div>
