@@ -6,8 +6,8 @@ export default function Services() {
   return (
     <div>
       <HeaderSection
-        title="Our Services"
-        imageBackground="images/1066_websize.jpg"
+        title="Elevate your projects beyond the ordinary."
+        imageBackground="images/3f5e60c7f779596c15517a776536c1e3.png"
       />
       <Divider/>
       <ServiceInformation/>
