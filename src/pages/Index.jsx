@@ -11,6 +11,7 @@ import OurTeam from './about/OurTeam'
 import OurStory from './about/OurStory'
 import Navbar from '../components/Navbar'
 import NavbarMobile from '../components/NavbarMobile'
+import Intro from './about/Intro'
 
 
 
@@ -76,7 +77,8 @@ function Index() {
               <Route path="services" element={<Services/>}/>
               <Route path="pricing" element={<Pricing/>}/>
               <Route path="about" element={<About/>}>
-                <Route path="" element={<OurStory/>}/>
+                <Route path="" element={<Intro/>}/>
+                <Route path="intro" element={<Intro/>}/>
                 <Route path="our-story" element={<OurStory/>}/>
                 <Route path="why-us" element={<WhyUs/>}/>
                 <Route path="our-familia" element={<OurTeam onClickTeamNameCallback={setContentModalCallback}/>}/>

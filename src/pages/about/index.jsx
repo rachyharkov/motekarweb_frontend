@@ -3,10 +3,11 @@ import HeaderSection from "../../components/HeaderSection";
 import './AboutPage.Module.css'
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import BigHeadline from "../home/partial-section/BigHeadline";
 
 export default function About() {
   const location = useLocation()
-  const path = location.pathname.split('/')[2] ?? 'our-story'
+  const path = location.pathname.split('/')[2] ?? 'intro'
 
   const menuNameRemovedMinusSignAndCapitalized = (str) => {
     return str.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
@@ -37,7 +38,8 @@ export default function About() {
           <div className="side-nav col-xs-12 col-sm-12 col-md-3 col-lg-3">
             <h4 className="side-nav-title">About</h4>
             <button className={'side-nav-btn-toggle ' + expandSideMenu} onClick={ExpandSideMenuHandler}><i className="fas fa-plus"></i></button>
-            <ul className={'side-nav-list ' + expandSideMenu}> 
+            <ul className={'side-nav-list ' + expandSideMenu}>
+              <li className="side-nav-item"><Link to="intro" onClick={() => setMenunya('Introduction')} className="side-nav-link">Introduction</Link></li>
               <li className="side-nav-item"><Link to="our-story" onClick={() => setMenunya('Our Story')} className="side-nav-link">Our Story</Link></li>
               <li className="side-nav-item"><Link to="why-us" onClick={() => setMenunya('Why Us?')} className="side-nav-link">Why Us?</Link></li>
               <li className="side-nav-item"><Link to="our-familia" onClick={() => setMenunya('Our Familia')} className="side-nav-link">Our Familia</Link></li>
@@ -52,6 +54,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <BigHeadline/>
     </>
   )
 }
