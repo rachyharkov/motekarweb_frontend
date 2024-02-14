@@ -12,12 +12,13 @@ import OurStory from './about/OurStory'
 import Navbar from '../components/Navbar'
 import NavbarMobile from '../components/NavbarMobile'
 import Intro from './about/Intro'
+import Tos from './about/Tos'
+import Contact from './contact'
 
 
 
 const Home = lazy(() => import('../pages/home'))
 const Services = lazy(() => import('../pages/services'))
-const Pricing = lazy(() => import('../pages/pricing'))
 const Faq = lazy(() => import('../pages/faq'))
 const About = lazy(() => import('../pages/about'))
 const Footer = lazy(() => import('../components/Footer'))
@@ -75,16 +76,17 @@ function Index() {
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="services" element={<Services/>}/>
-              <Route path="pricing" element={<Pricing/>}/>
               <Route path="about" element={<About/>}>
                 <Route path="" element={<Intro/>}/>
                 <Route path="intro" element={<Intro/>}/>
                 <Route path="our-story" element={<OurStory/>}/>
                 <Route path="why-us" element={<WhyUs/>}/>
                 <Route path="our-familia" element={<OurTeam onClickTeamNameCallback={setContentModalCallback}/>}/>
+                <Route path="tos" element={<Tos/>}/>
                 <Route path="*" element={<NotFound/>}/>
               </Route>
-              <Route path="/faq" element={<Faq/>}/>
+              <Route path="faq" element={<Faq/>}/>
+              <Route path="contact-us" element={<Contact/>}/>
               <Route path="*" element={<ErrorPage/>}/>
             </Routes>
           </Suspense>

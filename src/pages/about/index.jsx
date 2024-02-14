@@ -30,7 +30,7 @@ export default function About() {
     <>
       <HeaderSection
         title={menunya}
-        imageBackground="images/1066_websize.jpg"
+        imageBackground="images/e153d5cb1ce64ee2060b7791fc452b92.png"
       />
       <Divider/>
       <div className="container pt-5 mx-auto" style={{'maxWidth': '860px'}}>
@@ -43,6 +43,7 @@ export default function About() {
               <li className="side-nav-item"><Link to="our-story" onClick={() => setMenunya('Our Story')} className="side-nav-link">Our Story</Link></li>
               <li className="side-nav-item"><Link to="why-us" onClick={() => setMenunya('Why Us?')} className="side-nav-link">Why Us?</Link></li>
               <li className="side-nav-item"><Link to="our-familia" onClick={() => setMenunya('Our Familia')} className="side-nav-link">Our Familia</Link></li>
+              <li className="side-nav-item"><Link to="tos" onClick={() => setMenunya('Terms & Services')} className="side-nav-link">TOS</Link></li>
             </ul>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">

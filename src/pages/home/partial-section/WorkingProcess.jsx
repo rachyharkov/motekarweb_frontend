@@ -54,6 +54,13 @@ export default function WorkingProcess() {
     runAutoChangeVisualStep()
   }, [])
 
+  // if leave the page, clear the interval
+  useEffect(() => {
+    return () => {
+      clearInterval(interval)
+    }
+  }, [])
+
 
   return(
     <section className="section-vh-75 section-working-process">

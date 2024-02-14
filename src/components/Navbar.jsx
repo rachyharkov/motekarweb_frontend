@@ -20,9 +20,9 @@ export default function Navbar() {
         <ul>
           <li className={currentPath == '' ? 'active' : ''}><Link to={"/"}>Home</Link></li>
           <li className={currentPath == 'services' ? 'active' : ''}><Link to={"/services"}>services</Link></li>
-          <li className={currentPath == 'pricing' ? 'active' : ''}><Link to={"/pricing"}>pricing</Link></li>
           <li className={currentPath == 'about' ? 'active' : ''}><Link to={"/about"}>about</Link></li>
           <li className={currentPath == 'faq' ? 'active' : ''}><Link to={"/faq"}>FaQ</Link></li>
+          <li className={currentPath == 'contact-us' ? 'active' : ''}><Link to={"/contact-us"}>Contact</Link></li>
           <li className="animation start-home"></li>
         </ul>
       </nav>
