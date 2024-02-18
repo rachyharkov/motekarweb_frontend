@@ -22,9 +22,6 @@ export default function ServiceInformation() {
               <li>
                 <b>Love Story Films:</b> Illuminate your journey as a couple with a pre-wedding or engagement video that beautifully narrates your unique love story, creating a heartfelt introduction to your wedding festivities.
               </li>
-              <li>
-                <b>Same Day Edits:</b> Experience the magic of your wedding day immediately with a same-day edit that captures and showcases key moments, allowing you and your guests to reminisce on the joyous occasion in real-time.
-              </li>
             </ol>
             <p className="text-accent">
               Each package is expertly tailored by our professional wedding video editor to suit your preferences, ensuring a personalized and unforgettable representation of your wedding film.

@@ -6,9 +6,9 @@ export default function OurTeam({ onClickTeamNameCallback }) {
 
   return(
     <section className="section-vh-auto">
-      <h4 className="bold-title" style={{'color': 'var(--color-accent)'}}>MEET <span style={{'color': 'var(--color-secondary)'}}>OUR FAMILY TEAM MEMBER</span></h4>
+      <h4 className="bold-title" style={{'color': 'var(--color-accent)'}}>MEET <span style={{'color': 'var(--color-secondary)'}}>OUR TEAM MEMBER</span></h4>
       <p className="text-accent">
-      Our all-hands meetings are like work family reunions. Just <span style={{'color':'var(--color-secondary)'}}>click on the familia member's name</span> to find out more.
+      Our team meetings foster a strong sense of connection and collaboration. Just <span style={{'color':'var(--color-secondary)'}}>click one of the team member's name</span> to find out more.
       </p>
       <div className="container">
         <div className="row">

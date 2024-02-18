@@ -16,8 +16,8 @@ export default function OurFamily() {
       setPositionnya(e.target.swiper.activeIndex);
     });
 
-    // set initial position of swiper to 4
-    swiperElRef.current.swiper.slideTo(4, 0);
+    // set initial position of swiper to 3
+    swiperElRef.current.swiper.slideTo(2, 0);
   }, []);
 
   const myOptions = {
@@ -34,7 +34,7 @@ export default function OurFamily() {
         <div className="row">
           <div className="col-12 p-0">
             <h4 className="section-subtitle section-subtitle-with-bg">
-              Our Family
+              Our Team
             </h4>
             <swiper-container class="our-families" pagination="false" pagination-clickable="true" slides-per-view="auto" navigation="true" watch-overflow="true" responsive-width="true"
               centered-slides="true" grab-cursor="true" style={{
@@ -50,13 +50,7 @@ export default function OurFamily() {
                 <img src="images/member-2.png" alt="our-family-2" />
               </swiper-slide>
               <swiper-slide className="our-family">
-                <img src="images/people-placeholder.jpg" alt="our-family-3" />
-              </swiper-slide>
-              <swiper-slide className="our-family">
                 <img src="images/member-4.png" alt="our-family-4" />
-              </swiper-slide>
-              <swiper-slide className="our-family">
-                <img src="images/people-placeholder.jpg" alt="our-family-5" />
               </swiper-slide>
               <swiper-slide className="our-family">
                 <img src="images/member-1.png" alt="our-family-1" />

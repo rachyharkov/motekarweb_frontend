@@ -81,7 +81,7 @@ function Index() {
                 <Route path="intro" element={<Intro/>}/>
                 <Route path="our-story" element={<OurStory/>}/>
                 <Route path="why-us" element={<WhyUs/>}/>
-                <Route path="our-familia" element={<OurTeam onClickTeamNameCallback={setContentModalCallback}/>}/>
+                <Route path="our-team" element={<OurTeam onClickTeamNameCallback={setContentModalCallback}/>}/>
                 <Route path="tos" element={<Tos/>}/>
                 <Route path="*" element={<NotFound/>}/>
               </Route>

@@ -6,7 +6,6 @@ import '../../assets/css/page-about.css';
 export default function OurStory() {
   return(
     <section className="section-vh-auto">
-      <h4 className="text-white bold-title">SINCE 2017, WE'VE EDITED <span style={{'color': 'var(--color-secondary)'}}>OVER 1300 PROJECTS FOR OVER 100 CLIENTS</span>, WORLD-WIDE</h4>
       <p className="text-white text-justify">
         Motekar Studio is a wedding video editing company that specialize in creating beautiful and timeless memories of your wedding film.
       </p>

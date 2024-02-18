@@ -42,8 +42,8 @@ export default function About() {
               <li className="side-nav-item"><Link to="intro" onClick={() => setMenunya('Introduction')} className="side-nav-link">Introduction</Link></li>
               <li className="side-nav-item"><Link to="our-story" onClick={() => setMenunya('Our Story')} className="side-nav-link">Our Story</Link></li>
               <li className="side-nav-item"><Link to="why-us" onClick={() => setMenunya('Why Us?')} className="side-nav-link">Why Us?</Link></li>
-              <li className="side-nav-item"><Link to="our-familia" onClick={() => setMenunya('Our Familia')} className="side-nav-link">Our Familia</Link></li>
-              <li className="side-nav-item"><Link to="tos" onClick={() => setMenunya('Terms & Services')} className="side-nav-link">TOS</Link></li>
+              <li className="side-nav-item"><Link to="our-team" onClick={() => setMenunya('Our Team')} className="side-nav-link">Our Team</Link></li>
+              <li className="side-nav-item"><Link to="tos" onClick={() => setMenunya('Terms of Services')} className="side-nav-link">TOS</Link></li>
             </ul>
           </div>
           <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">
