@@ -1,5 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react'
-import { Outlet, Route, Routes, useLocation } from 'react-router-dom'
+import { Outlet, Route, Routes, useLocation, Router } from 'react-router-dom'
 
 import BlurBackground from '../components/BlurBackground'
 import BiodataMember from './about/partial-section/BiodataMember'
@@ -60,11 +60,12 @@ function Index() {
     setShowModalStatus(true)
     setShowBlurBackground(true)
   }
-
-  // get width of window
-  // if width is less than 768px, then show hamburger menu
-  // if width is greater than 768px, then show navbar
   
+  //listen to route change
+  const location = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location])
   return (
     <>
       <div style={{position: 'relative'}}>

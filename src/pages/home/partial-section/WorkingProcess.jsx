@@ -27,8 +27,8 @@ export default function WorkingProcess() {
     },
     3: {
       title: 'Download Films',
-      description: 'We will deliver the video to you within 24 hours.'
-    },
+      description: 'We\'ll send you the project file and complete assets from our cloud storage'
+    }
   }
 
 
